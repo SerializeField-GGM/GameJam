@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Core;
 using UnityEngine;
 using TMPro;
 
@@ -7,9 +6,8 @@ namespace JUNE
 {
     public class FameManager : MonoBehaviour
     {
-        private int totalFame = 0;
-        public int Totalmoney => totalFame;
         TextMeshProUGUI fame;
+        private SchoolData sd = null;
 
         private void Awake()
         {
@@ -18,19 +16,20 @@ namespace JUNE
 
         void Start()
         {
-            fame.text = "명성 : " + totalFame;
+            sd = DataManager.Instance.sd;
+            fame.text = "명성 : " + sd.fame;
         }
 
-        public void MinusFame(int minusFame)
+        public void MinusFame(long minusFame)
         {
-            totalFame -= minusFame;
-            fame.text = "명성 : " + totalFame;
+            sd.fame -= minusFame;
+            fame.text = "명성 : " + sd.fame;
         }
 
-        public void GetFame(int getFame)
+        public void GetFame(long getFame)
         {
-            totalFame += getFame;
-            fame.text = "명성  : " + totalFame;
+            sd.fame += getFame;
+            fame.text = "명성  : " + sd.fame;
         }
     }
 }

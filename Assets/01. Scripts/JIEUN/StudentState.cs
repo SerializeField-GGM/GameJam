@@ -18,15 +18,8 @@ namespace JIEUN
         [SerializeField] int passionVal = 0;
         [SerializeField] int abilityVal = 0;
 
-
-        void Start()
-        {
-        
-        }
-
         void Update()
         {
-            Escape();
             StateGage();
         }
 
@@ -50,16 +43,16 @@ namespace JIEUN
             seq.Append(panel.transform.DOScale(new Vector3(1f,1f), 0.6f));
         }
 
-        void Escape()
+        public void Escape()
         {
-            
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                Sequence seq = DOTween.Sequence();
+            Sequence seq = DOTween.Sequence();
 
-                seq.Append(panel.transform.DOScale(new Vector3(1.01f,1.01f), 0.4f));
-                seq.Append(panel.transform.DOScale(new Vector3(0,0),0.6f));
-            }
+            seq.Append(panel.transform.DOScale(new Vector3(1.05f, 1.05f), 0.3f));
+            seq.Append(panel.transform.DOScale(new Vector3(0, 0), 0.3f));
+            seq.AppendCallback(() =>
+            {
+                panel.SetActive(false);
+            });
         }
     }
 }

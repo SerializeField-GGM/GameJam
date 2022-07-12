@@ -25,13 +25,7 @@ namespace JIEUN
 
         [SerializeField] int stressVal3 = 0;
         [SerializeField] int passionVal3 = 0;
-        [SerializeField] int abilityVal3 = 0;
-
-        void Update()
-        {
-            StateGage();
-        }
-        
+        [SerializeField] int abilityVal3 = 0;      
 
         public void ShowGradePanel()
         {
@@ -68,15 +62,15 @@ namespace JIEUN
             abilityGage.value = Mathf.Clamp(abilityVal2, 0 ,100);
         }
 
-        public void Escape()
+        public void Escape(GameObject Panel)
         {
             Sequence seq = DOTween.Sequence();
 
-            seq.Append(panel.transform.DOScale(new Vector3(1.05f, 1.05f), 0.3f));
-            seq.Append(panel.transform.DOScale(new Vector3(0, 0), 0.3f));
+            seq.Append(Panel.transform.DOScale(new Vector3(1.05f, 1.05f), 0.3f));
+            seq.Append(Panel.transform.DOScale(new Vector3(0, 0), 0.3f));
             seq.AppendCallback(() =>
             {
-                panel.SetActive(false);
+                Panel.SetActive(false);
             });
         }
         

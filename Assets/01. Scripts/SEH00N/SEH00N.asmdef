@@ -1,0 +1,16 @@
+{
+    "name": "SEH00N",
+    "rootNamespace": "SEH00N",
+    "references": [
+        "GUID:f6d3c7e908a50534e9aa12fdffab7dbd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

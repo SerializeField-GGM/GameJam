@@ -1,7 +1,11 @@
 {
     "name": "JUNSUNG",
     "rootNamespace": "JUNSUNG",
-    "references": [],
+    "references": [
+        "GUID:f6d3c7e908a50534e9aa12fdffab7dbd",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

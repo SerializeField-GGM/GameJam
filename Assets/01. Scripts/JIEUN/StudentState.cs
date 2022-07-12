@@ -36,9 +36,9 @@ namespace JIEUN
             passionGage.value = passionVal;
             abilityGage.value = abilityVal;
 
-            Mathf.Clamp(stressVal, 0, 100);
-            Mathf.Clamp(passionVal, 0, 100);
-            Mathf.Clamp(abilityVal, 0, 100);
+            stressVal = Mathf.Clamp(stressVal, 0, 100);
+            passionVal = Mathf.Clamp(passionVal, 0, 100);
+            abilityVal = Mathf.Clamp(abilityVal, 0, 100);
         }
 
         public void ClickStudentB()

@@ -18,19 +18,19 @@ namespace JUNE
 
         void Start()
         {
-            money.text = "Money : " + totalmoney;
+            money.text = "돈 : " + totalmoney;
         }
 
         public void UseMoney(int useMoney)
         {
             totalmoney -= useMoney;
-            money.text = "Money : " + totalmoney;
+            money.text = "돈 : " + totalmoney;
         }
 
         public void GetMoney(int getMoney)
         {
             totalmoney += getMoney;
-            money.text = "Money : " + totalmoney;
+            money.text = "돈 : " + totalmoney;
         }
     }
 }

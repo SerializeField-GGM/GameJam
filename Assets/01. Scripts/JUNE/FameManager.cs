@@ -18,19 +18,19 @@ namespace JUNE
 
         void Start()
         {
-            fame.text = "Fame : " + totalFame;
+            fame.text = "명성 : " + totalFame;
         }
 
         public void MinusFame(int minusFame)
         {
             totalFame -= minusFame;
-            fame.text = "Fame : " + totalFame;
+            fame.text = "명성 : " + totalFame;
         }
 
         public void GetFame(int getFame)
         {
             totalFame += getFame;
-            fame.text = "Fame  : " + totalFame;
+            fame.text = "명성  : " + totalFame;
         }
     }
 }

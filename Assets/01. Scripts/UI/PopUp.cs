@@ -1,15 +1,24 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
-    public class PopUp : MonoBehaviour
+    public class PopUp : Buttons
     {
-        [SerializeField] Vector3 endVal;
         [SerializeField] float duration;
         public void DoPopUp(RectTransform rt)
         {
-            rt.DOScale(endVal, duration);
+            rt.localScale = Vector3.zero;
+            rt.gameObject.SetActive(true);
+            rt.DOScale(Vector3.one, duration);
+            Init();
+        }
+
+        public void DoPopDown(RectTransform rt)
+        {
+            rt.DOScale(Vector3.zero, duration).OnComplete(() => rt.gameObject.SetActive(false));
+            Init();
         }
     }
 }

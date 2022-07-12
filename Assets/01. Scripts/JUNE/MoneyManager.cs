@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Core;
 
 namespace JUNE
 {
     public class MoneyManager : MonoBehaviour
     {
-        private int totalmoney = 0;
-        public int Totalmoney => totalmoney;
         TextMeshProUGUI money;
+        private SchoolData sd = null;
 
         private void Awake()
         {
@@ -18,19 +16,21 @@ namespace JUNE
 
         void Start()
         {
-            money.text = "돈 : " + totalmoney;
+            sd = DataManager.Instance.sd;
+            money.text = "돈 : " + sd.money;
         }
 
-        public void UseMoney(int useMoney)
+        public void UseMoney(long useMoney)
         {
-            totalmoney -= useMoney;
-            money.text = "돈 : " + totalmoney;
+            sd.money -= useMoney;
+            money.text = "돈 : " + sd.money;
         }
 
-        public void GetMoney(int getMoney)
+        public void GetMoney(long getMoney)
         {
-            totalmoney += getMoney;
-            money.text = "돈 : " + totalmoney;
+            sd.money += getMoney;
+            sd.money = (long)Mathf.Min(sd.money, 0);
+            money.text = "돈 : " + sd.money;
         }
     }
 }

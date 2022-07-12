@@ -9,57 +9,70 @@ namespace JIEUN
     public class StudentState : MonoBehaviour
     {
         
-        [SerializeField] GameObject panel = null;
+        [SerializeField] GameObject gradePanel = null;
+        [SerializeField] GameObject statePanel = null;
         [SerializeField] Slider stressGage = null;
         [SerializeField] Slider passionGage = null;
         [SerializeField] Slider abilityGage = null;
 
-        [SerializeField] int stressVal = 0;
-        [SerializeField] int passionVal = 0;
-        [SerializeField] int abilityVal = 0;
+        [SerializeField] int stressVal1 = 0;
+        [SerializeField] int passionVal1 = 0;
+        [SerializeField] int abilityVal1 = 0;
 
+        [SerializeField] int stressVal2 = 0;
+        [SerializeField] int passionVal2 = 0;
+        [SerializeField] int abilityVal2 = 0;
 
-        void Start()
+        [SerializeField] int stressVal3 = 0;
+        [SerializeField] int passionVal3 = 0;
+        [SerializeField] int abilityVal3 = 0;
+
+        public void ShowGradePanel()
         {
-        
-        }
-
-        void Update()
-        {
-            Escape();
-            StateGage();
-        }
-
-        void StateGage() 
-        {
-            stressGage.value = stressVal;
-            passionGage.value = passionVal;
-            abilityGage.value = abilityVal;
-
-            stressVal = Mathf.Clamp(stressVal, 0, 100);
-            passionVal = Mathf.Clamp(passionVal, 0, 100);
-            abilityVal = Mathf.Clamp(abilityVal, 0, 100);
-        }
-
-        public void ClickStudentB()
-        {
-            panel.SetActive(true);
+            gradePanel.SetActive(true);
 
             Sequence seq = DOTween.Sequence();
 
-            seq.Append(panel.transform.DOScale(new Vector3(1f,1f), 0.6f));
+            seq.Append(gradePanel.transform.DOScale(new Vector3(1f,1f), 0.6f));
         }
 
-        void Escape()
+        public void Click1()
         {
+            statePanel.SetActive(true);
             
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                Sequence seq = DOTween.Sequence();
+            Sequence seq = DOTween.Sequence();
 
-                seq.Append(panel.transform.DOScale(new Vector3(1.01f,1.01f), 0.4f));
-                seq.Append(panel.transform.DOScale(new Vector3(0,0),0.6f));
-            }
+            seq.Append(statePanel.transform.DOScale(new Vector3(1f,1f), 0.6f));
+
+            stressGage.value = Mathf.Clamp(stressVal1, 0, 100);
+            passionGage.value = Mathf.Clamp(passionVal1, 0, 100);
+            abilityGage.value = Mathf.Clamp(abilityVal1, 0 ,100);
+        }
+
+        public void Click2()
+        {
+            statePanel.SetActive(true);
+            
+            Sequence seq = DOTween.Sequence();
+
+            seq.Append(statePanel.transform.DOScale(new Vector3(1f,1f), 0.6f));
+
+            stressGage.value = Mathf.Clamp(stressVal2, 0, 100);
+            passionGage.value = Mathf.Clamp(passionVal2, 0, 100);
+            abilityGage.value = Mathf.Clamp(abilityVal2, 0 ,100);
+        }
+
+        public void Click3()
+        {
+            statePanel.SetActive(true);
+            
+            Sequence seq = DOTween.Sequence();
+
+            seq.Append(statePanel.transform.DOScale(new Vector3(1f,1f), 0.6f));
+
+            stressGage.value = Mathf.Clamp(stressVal3, 0, 100);
+            passionGage.value = Mathf.Clamp(passionVal3, 0, 100);
+            abilityGage.value = Mathf.Clamp(abilityVal3, 0 ,100);
         }
     }
 }

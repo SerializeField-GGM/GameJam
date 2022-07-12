@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8366780467844274902}
   - component: {fileID: 8366780467844274900}
   - component: {fileID: 8366780467844274903}
+  - component: {fileID: 6182005908471568029}
   m_Layer: 5
   m_Name: value
   m_TagString: Untagged
@@ -134,6 +135,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6182005908471568029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8366780467844274905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fbb4338b1b0e424faa37a53ef45f038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8366780468930791504
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +159,7 @@ GameObject:
   - component: {fileID: 8366780468930791535}
   - component: {fileID: 8366780468930791534}
   - component: {fileID: 8366780468930791532}
+  - component: {fileID: -6615204570354783496}
   m_Layer: 5
   m_Name: Passion
   m_TagString: Untagged
@@ -221,5 +235,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99dffe258132f63419e2b2009b503de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6615204570354783496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8366780468930791504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f80cdef45cd9a044ca3bcdb46cdc3f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

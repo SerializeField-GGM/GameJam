@@ -10,6 +10,7 @@ namespace Core
 
         public void CreatePool(PoolableMono prefab, Transform parent)
         {
+            if(pools.ContainsKey(prefab.name)) { Debug.Log($"키 중복"); return; }
             Pools<PoolableMono> pool = new Pools<PoolableMono>(prefab, parent);
             pools.Add(prefab.name, pool);
         }

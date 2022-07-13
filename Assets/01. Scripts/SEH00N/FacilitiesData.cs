@@ -10,13 +10,11 @@ namespace SEH00N
         [SerializeField] string facilitieName;
         [SerializeField] long fame, cost;
         private SchoolData sd = null;
-        private MoneyManager mm = null;
         private FameManager fm = null;
 
         private void Start()
         {
             sd = DataManager.Instance.sd;
-            mm = GameObject.Find("Money").GetComponent<MoneyManager>();
             fm = GameObject.Find("Fame").GetComponent<FameManager>();
             if(sd.facilities.Contains(facilitieName))
                 GetComponentInChildren<Button>().interactable = false;
@@ -26,7 +24,7 @@ namespace SEH00N
         {
             if(sd.money >= cost)
             {
-                mm.SetMoney(cost);
+                MoneyManager.Instance.SetMoney(-cost);
                 fm.GetFame(fame);
                 sd.facilities.Add(facilitieName);
                 GetComponentInChildren<Button>().interactable = false;

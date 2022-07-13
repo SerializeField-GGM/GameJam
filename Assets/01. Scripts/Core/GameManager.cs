@@ -3,15 +3,23 @@ using UnityEngine;
 
 namespace Core
 {
-    public class GameManager : MonoSingleton<GameManager>
+    public class GameManager : MonoBehaviour
     {
-        [SerializeField] List<PoolableMono> poolingList = new List<PoolableMono>();
+        public static GameManager Instance = null;
+
+        [SerializeField] List<PoolableMono> poolingList;
         public GameObject main;
-        private Transform pooler = null;
+        public Transform pooler = null;
         private void Awake()
         {
+            if(Instance == null) Instance = this;
+
             pooler = transform.GetChild(0);
             if(pooler == null) return;
+
+            if(PoolManager.Instance == null) 
+                PoolManager.Instance = new PoolManager();
+
             foreach(PoolableMono prefab in poolingList)
                 PoolManager.Instance.CreatePool(prefab, pooler);
             

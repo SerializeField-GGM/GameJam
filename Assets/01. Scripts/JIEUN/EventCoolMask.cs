@@ -23,6 +23,9 @@ namespace JIEUN
 
         private void Update()
         {
+            if(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.LeftShift))
+                currentTime = coolTime;
+
             currentTime += Time.deltaTime;
             image.fillAmount = (coolTime - currentTime) / coolTime;
             if(image.fillAmount > 0) button.interactable = false;

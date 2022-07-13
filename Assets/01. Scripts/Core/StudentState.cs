@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 namespace Core
 {
@@ -88,40 +89,77 @@ namespace Core
 
         public static StudentState Instance = null;
 
-        private Slider stressS = null;
-        private Slider passionS = null;
-        private Slider talentS = null;
+        private StudentData std = null;
+        private Transform textPanel = null;
+        private Slider stressS, passionS, talentS;
+        private TextMeshProUGUI countT, stressT, passionT, talentT;
 
         private void Awake()
         {
             if (Instance == null) Instance = this;
 
+            textPanel = transform.Find("StatVal").transform;
             stressS = transform.Find("StressGauge").GetComponentInChildren<Slider>();
             passionS = transform.Find("PassionGauge").GetComponentInChildren<Slider>();
             talentS = transform.Find("TalentGauge").GetComponentInChildren<Slider>();
+            countT = textPanel.Find("CountT").GetComponent<TextMeshProUGUI>();
+            stressT = textPanel.Find("StressT").GetComponent<TextMeshProUGUI>();
+            passionT = textPanel.Find("PassionT").GetComponent<TextMeshProUGUI>();
+            talentT = textPanel.Find("TalentT").GetComponent<TextMeshProUGUI>();
         }
 
         private void Start()
         {
-            stressS.value = DataManager.Instance.std.stress;
-            passionS.value = DataManager.Instance.std.passion;
-            talentS.value = DataManager.Instance.std.talent;
+            std = DataManager.Instance.std;
+
+            countT.text = $"학생수\t\t\t\t\t\t{std.count}명";
+
+            stressS.value = std.stress;
+            stressT.text = $"스트레스\t\t\t\t\t\t\t\t\t\t\t\t{std.stress}%";
+
+            passionS.value = std.passion;
+            passionT.text = $"열정\t\t\t\t\t\t\t\t\t\t\t\t\t{std.passion}%";
+
+            talentS.value = std.talent;
+            talentT.text = $"능력\t\t\t\t\t\t\t\t\t\t\t\t\t{std.talent}%";
+        }
+
+        private void Update()
+        {
+            if(Input.GetButtonDown("Jump"))
+            {
+                Debug.Log($"123");
+                AddStudent(1);
+            }
         }
 
         public void AddStress(int value)
         {
-            DataManager.Instance.std.stress += value;
+            std.stress += value;
+            std.stress = Mathf.Clamp(std.stress, 0, 100);
+            stressT.text = $"스트레스\t\t\t\t\t\t\t\t\t\t\t\t{std.stress}%";
             stressS.value += value;
         }
         public void AddPassion(int value)
         {
-            DataManager.Instance.std.passion += value;
+            std.passion += value;
+            std.passion = Mathf.Clamp(std.passion, 0, 100);
+            passionT.text = $"열정\t\t\t\t\t\t\t\t\t\t\t\t\t{std.passion}%";
             passionS.value += value;
         }
         public void AddTalent(int value)
         {
-            DataManager.Instance.std.talent += value;
+            std.talent += value;
+            std.talent = Mathf.Clamp(std.talent, 0, 100);
+            talentT.text = $"능력\t\t\t\t\t\t\t\t\t\t\t\t\t{std.talent}%";
             talentS.value += value;
+        }
+
+        public void AddStudent(int value)
+        {
+            std.count += value;
+            std.talent = Mathf.Max(std.talent, 0);
+            countT.text = $"학생수\t\t\t\t\t\t{std.count}명";
         }
     }
 }

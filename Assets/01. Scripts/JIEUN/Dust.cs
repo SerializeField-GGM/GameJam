@@ -25,6 +25,7 @@ namespace JIEUN
 
             if(image.color.a <= 0)
             {
+                transform.SetParent(GameManager.Instance.pooler);
                 ScoreManager.Instance.dustCount++;
                 PoolManager.Instance.Push(this);
                 CleanManager.Instance.i--;

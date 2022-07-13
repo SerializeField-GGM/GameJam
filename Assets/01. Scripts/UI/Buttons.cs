@@ -8,6 +8,7 @@ namespace UI
         protected void Init()
         {
             Button button = GetComponent<Button>();
+            if(button == null) return;
             button.interactable = false;
             button.interactable = true;
         }

@@ -19,11 +19,6 @@ namespace JIEUN
             Instance = this;
         }
 
-        void Start()
-        {
-            
-        }
-
         void Update()
         {
             ScoreCount();

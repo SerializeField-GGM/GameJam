@@ -25,6 +25,7 @@ namespace JIEUN
             currentTime += Time.deltaTime;
             image.fillAmount = (coolTime - currentTime) / coolTime;
             if(image.fillAmount > 0) button.interactable = false;
+            else button.interactable = true;
         }
 
         #region 코루틴로직

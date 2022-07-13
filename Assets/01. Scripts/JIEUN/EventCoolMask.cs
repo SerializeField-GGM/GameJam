@@ -6,7 +6,7 @@ namespace JIEUN
 {
     public class EventCoolMask : MonoBehaviour
     {
-
+        [SerializeField] string maskName;
         [SerializeField] float coolTime = 0;
         [SerializeField] float currentTime = 0;
         private Button button  = null;
@@ -18,6 +18,7 @@ namespace JIEUN
             image.fillAmount = (coolTime - currentTime) / coolTime;
             button = GetComponentInParent<Button>();
             currentTime = coolTime;
+            currentTime = PlayerPrefs.GetFloat(maskName, coolTime);
         }
 
         private void Update()
@@ -26,6 +27,11 @@ namespace JIEUN
             image.fillAmount = (coolTime - currentTime) / coolTime;
             if(image.fillAmount > 0) button.interactable = false;
             else button.interactable = true;
+        }
+
+        private void OnDisable()
+        {
+            PlayerPrefs.SetFloat(maskName, currentTime);
         }
 
         #region 코루틴로직

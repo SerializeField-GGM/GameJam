@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Core;
 using UnityEngine;
 
 namespace JUNE
@@ -19,6 +18,8 @@ namespace JUNE
             clearPanel.SetActive(false);
             roomPanel.SetActive(false);
             Time.timeScale = 1;
+            GameManager.Instance.main.SetActive(true);
+            SceneLoader.Instance.RemoveScene("RAMEN");
         }
     }
 }

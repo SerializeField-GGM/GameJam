@@ -31,6 +31,9 @@ namespace Core
 
         public void SaveStudentData()
         {
+            std.passion = Mathf.Clamp(std.passion, 0 , 100);
+            std.stress = Mathf.Clamp(std.stress, 0 , 100);
+            std.talent = Mathf.Clamp(std.talent, 0 , 100);
             string JSON = JsonUtility.ToJson(std);
             PlayerPrefs.SetString("stdJSON", JSON);
         }

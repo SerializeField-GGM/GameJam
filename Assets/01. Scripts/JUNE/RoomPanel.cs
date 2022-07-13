@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +20,8 @@ namespace JUNE
         [SerializeField] GameObject clearText;
         [SerializeField] GameObject failText;
 
+        private bool isOver = false;
+
         private void OnEnable()
         {
             scraps.SetActive(true);
@@ -31,15 +32,19 @@ namespace JUNE
 
         void Update()
         {
-            if(smell.activeSelf == false && ramen.activeSelf == false && soup.activeSelf == false && scraps.activeSelf == false)
+            if(smell.activeSelf == false && ramen.activeSelf == false && soup.activeSelf == false && scraps.activeSelf == false && !isOver)
             {
+                isOver = true;
                 clearText.SetActive(true);
+                StudentState.Instance.AddStress(-3);
                 Time.timeScale = 0;
             }
 
-            if(time.fillAmount == 1 && (smell.activeSelf != false || ramen.activeSelf != false || soup.activeSelf != false || scraps.activeSelf != false))
+            if(time.fillAmount == 1 && !isOver && (smell.activeSelf != false || ramen.activeSelf != false || soup.activeSelf != false || scraps.activeSelf != false))
             {
+                isOver = true;
                 failText.SetActive(true);
+                StudentState.Instance.AddStress(+3);
                 Time.timeScale = 0;
             }
         }

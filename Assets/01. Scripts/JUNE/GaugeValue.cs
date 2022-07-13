@@ -1,5 +1,5 @@
+using Core;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +12,8 @@ namespace JUNE
 
         [SerializeField] GameObject text;
         [SerializeField] GameObject eatUpPanel;
+        private bool isOver = false;
+
         void Awake()
         {
             slider = GetComponent<Slider>();
@@ -34,9 +36,12 @@ namespace JUNE
             totaltime += Time.deltaTime;
             slider.value = totaltime / 15;
 
-            if(slider.value == 1)
+            if(slider.value == 1 && !isOver)
             {
+                isOver = true;
                 eatUpPanel.SetActive(true);
+                DataManager.Instance.std.stress -= 3;
+                StudentState.Instance.AddStress(-3);
                 Time.timeScale = 0;
             }
         }

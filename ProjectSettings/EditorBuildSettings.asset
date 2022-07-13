@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/05. Scenes/PROGRAMMING.unity
     guid: 8211a3b2d03b2c24c870ad3607ccea99
+  - enabled: 1
+    path: Assets/05. Scenes/RAMEN.unity
+    guid: 292e9b32ade75ad4b85ec2c3e7c4ffd8
   m_configObjects: {}

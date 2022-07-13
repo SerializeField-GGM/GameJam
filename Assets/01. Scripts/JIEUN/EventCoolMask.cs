@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,14 +9,26 @@ namespace JIEUN
 
         [SerializeField] float coolTime = 0;
         [SerializeField] float currentTime = 0;
+        private Button button  = null;
         private Image image = null;
 
         private void Awake()
         {
             image = GetComponent<Image>();
             image.fillAmount = (coolTime - currentTime) / coolTime;
+            button = GetComponentInParent<Button>();
             currentTime = coolTime;
         }
+
+        private void Update()
+        {
+            currentTime += Time.deltaTime;
+            image.fillAmount = (coolTime - currentTime) / coolTime;
+            if(image.fillAmount > 0) button.interactable = false;
+            else button.interactable = true;
+        }
+
+        #region 코루틴로직
 
         IEnumerator CoolTime()
         {
@@ -39,5 +50,6 @@ namespace JIEUN
                 return;
             StartCoroutine(CoolTime());
         }
+        #endregion
     }
 }

@@ -15,6 +15,13 @@ namespace Core
         {
             this.prefab = prefab;
             this.parent = parent;
+
+            for(int i = 0; i < 10; i ++)
+            {
+                T temp = GameObject.Instantiate(prefab, parent);
+                temp.gameObject.SetActive(false);
+                temp.name = temp.name.Replace("(Clone)", null);
+            }
         }
 
         public T Pop()

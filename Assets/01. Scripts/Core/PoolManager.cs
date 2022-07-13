@@ -3,8 +3,9 @@ using UnityEngine;
 
 namespace Core
 {
-    public class PoolManager : MonoSingleton<PoolManager>
+    public class PoolManager
     {
+        public static PoolManager Instance = null;
         private Dictionary<string, Pools<PoolableMono>> pools = new Dictionary<string, Pools<PoolableMono>>();
 
         public void CreatePool(PoolableMono prefab, Transform parent)

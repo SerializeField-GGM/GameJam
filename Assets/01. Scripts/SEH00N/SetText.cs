@@ -29,14 +29,13 @@ namespace SEH00N
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return) && inputField.interactable)
             {
                 if (texts[randIndex] == inputField.text)
                 {
                     isCorrect = true;
                     ScoreManager.Instance.SetScore(100);
                     ResetText();
-
                 }
                 else
                 {

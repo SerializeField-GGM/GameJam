@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using Core;
 using TMPro;
 using DG.Tweening;
 
@@ -56,7 +56,7 @@ namespace JUNSUNG
                 arrow.transform.parent = boxTrm;
             }
 
-            scoreText.text = "0¡°";
+            scoreText.text = "0Ï†ê";
 
             startTextInitPos = startTextTrm.transform.position;
             startTextInitColor = startText.color;
@@ -132,7 +132,7 @@ namespace JUNSUNG
             currentArrow.SetActive(false);
             currentArrow.transform.parent = this.transform;
             arrowList.Add(currentArrow);
-            scoreText.text = $"{++score}¡°";
+            scoreText.text = $"{++score}Ï†ê";
             GameObject arrow = arrowList[0];
             arrowList.Remove(arrow);
             arrow.SetActive(true);
@@ -141,13 +141,13 @@ namespace JUNSUNG
 
         private void End()
         {
-            if (time <= 0)
+            if (time <= 0 && !isEnd)
             {
                 isEnd = true;
                 endPanel.SetActive(true);
                 GetMoney = score * 1000000;
-
-                endPanel.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"{GetMoney}ø¯ »πµÊ";
+                MoneyManager.Instance.SetMoney(GetMoney);
+                endPanel.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"{GetMoney}Ïõê ÌöçÎìù";
             }
         }
 
@@ -161,7 +161,7 @@ namespace JUNSUNG
             {
                 yield return new WaitForSeconds(1);
                 startText.SetText(i.ToString());
-                if(i == 0) { startText.SetText("Ω√¿€!"); }
+                if(i == 0) { startText.SetText("ÏãúÏûë!"); }
                 startTextTrm.DOMoveY(145f, 1);
                 currentTime = 0;
                 percent = 0;

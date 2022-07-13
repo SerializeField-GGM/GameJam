@@ -3,8 +3,10 @@ using UnityEngine;
 
 namespace Core
 {
-    public class SceneLoader : MonoSingleton<SceneLoader>
+    public class SceneLoader
     {
+        public static SceneLoader Instance = null;
+
         public void AddScene(string name)
         {
             SceneManager.LoadScene(name, LoadSceneMode.Additive);

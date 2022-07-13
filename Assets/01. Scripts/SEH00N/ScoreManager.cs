@@ -6,7 +6,7 @@ namespace SEH00N
 {
     public class ScoreManager : MonoSingleton<ScoreManager>
     {
-        private int score = 0;
+        public int score { get; set; }
         private TextMeshProUGUI scoreText = null;
 
         private void Awake()

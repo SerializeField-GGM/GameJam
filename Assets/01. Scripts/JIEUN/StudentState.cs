@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-namespace JIEUN
+namespace Core
 {
     public class StudentState : MonoBehaviour
     {
-        
+        #region
         [SerializeField] GameObject gradePanel = null;
         [SerializeField] GameObject statePanel = null;
         [SerializeField] Slider stressGage = null;
@@ -85,6 +83,27 @@ namespace JIEUN
             stressGage.value = Mathf.Clamp(stressVal3, 0, 100);
             passionGage.value = Mathf.Clamp(passionVal3, 0, 100);
             abilityGage.value = Mathf.Clamp(abilityVal3, 0 ,100);
+        }
+        #endregion
+
+        public static StudentState Instance = null;
+
+        private Slider stressS = null;
+        private Slider passionS = null;
+        private Slider talentS = null;
+
+        private void Awake()
+        {
+            if(Instance == null) Instance = this;
+            
+            stressS = transform.Find("StressGauge").GetComponentInChildren<Slider>();
+            passionS = transform.Find("PassionGauge").GetComponentInChildren<Slider>();
+            talentS = transform.Find("TalentGauge").GetComponentInChildren<Slider>();
+        }
+
+        public void AddGauge(Slider slider, int value)
+        {
+            slider.value += value;
         }
     }
 }

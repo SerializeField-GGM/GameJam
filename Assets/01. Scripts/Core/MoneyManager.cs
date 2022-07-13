@@ -1,36 +1,32 @@
 using UnityEngine;
 using TMPro;
-using Core;
 
-namespace JUNE
+namespace Core
 {
     public class MoneyManager : MonoBehaviour
     {
+        public static MoneyManager Instance = null;
+
         TextMeshProUGUI money;
         private SchoolData sd = null;
 
         private void Awake()
         {
-            money = GetComponent<TextMeshProUGUI>();
+            if(Instance == null) Instance = this;
+            money = GameObject.Find("Money").GetComponent<TextMeshProUGUI>();
         }
 
-        void Start()
+        private void Start()
         {
             sd = DataManager.Instance.sd;
             money.text = "돈 : " + sd.money;
         }
 
-        public void UseMoney(long useMoney)
+        public void SetMoney(long value)
         {
-            sd.money -= useMoney;
-            money.text = "돈 : " + sd.money;
-        }
-
-        public void GetMoney(long getMoney)
-        {
-            sd.money += getMoney;
-            sd.money = (long)Mathf.Min(sd.money, 0);
+            sd.money += value;
             money.text = "돈 : " + sd.money;
         }
     }
 }
+

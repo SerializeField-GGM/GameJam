@@ -26,7 +26,7 @@ namespace SEH00N
         {
             if(sd.money >= cost)
             {
-                mm.UseMoney(cost);
+                mm.SetMoney(cost);
                 fm.GetFame(fame);
                 sd.facilities.Add(facilitieName);
                 GetComponentInChildren<Button>().interactable = false;

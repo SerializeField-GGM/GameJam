@@ -7,10 +7,10 @@ namespace Test
 {
     public class TestMoney : MonoBehaviour
     {
-        [SerializeField] MoneyManager moneyManager;
+        //[SerializeField] MoneyManager moneyManager;
         public void OnClick123123()
         {
-            moneyManager.GetMoney(1);
+            //moneyManager.GetMoney(1);
         }
     }
 }

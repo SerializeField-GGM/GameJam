@@ -27,12 +27,6 @@ namespace JIEUN
         [SerializeField] int passionVal3 = 0;
         [SerializeField] int abilityVal3 = 0;
 
-        void Update()
-        {
-            StateGage();
-        }
-        
-
         public void ShowGradePanel()
         {
             gradePanel.SetActive(true);
@@ -68,7 +62,7 @@ namespace JIEUN
             abilityGage.value = Mathf.Clamp(abilityVal2, 0 ,100);
         }
 
-        public void Escape()
+        public void Escape(GameObject panel)
         {
             Sequence seq = DOTween.Sequence();
 

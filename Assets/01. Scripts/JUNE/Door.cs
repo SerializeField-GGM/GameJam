@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using JUNSUNG;
 
 namespace JUNE
 {
     public class Door : MonoBehaviour
     {
         [SerializeField] GameObject febreeze;
+        [SerializeField] AudioClip Qnflsms;
         Image image;
         Color c;
         private float currentTime = 0;
@@ -31,6 +33,7 @@ namespace JUNE
             if (percent > 1)
             {
                 gameObject.SetActive(false);
+                SoundControll.Instance.PlayButtonSound(Qnflsms);
             }
         }
         private void OnTriggerStay2D(Collider2D other)

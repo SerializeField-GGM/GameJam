@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace Core
 {
-    public class TimeManager : MonoBehaviour
+    public class TimeManager : MonoSingleton<TimeManager>
     {
         public enum Season
         {

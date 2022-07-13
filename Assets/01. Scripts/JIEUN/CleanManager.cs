@@ -48,9 +48,9 @@ namespace JIEUN
                 int randStress = Random.Range(-5, 6);
                 int getMoney = ScoreManager.Instance.dustCount * 2100;
                 if(randStress > 0)
-                    gameovertxt.text = $"에잇시팔\n스트레스 +{randStress}\n{getMoney}원";
+                    gameovertxt.text = $"청소를 열심히 해서 상점을 받았다!\n스트레스 +{randStress}\n{getMoney}원";
                 else
-                    gameovertxt.text = $"오예\n스트레스 {randStress}\n{getMoney}원";
+                    gameovertxt.text = $"앗! 먼지가 남아있었네..\n스트레스 {randStress}\n{getMoney}원";
                 MoneyManager.Instance.SetMoney(ScoreManager.Instance.dustCount * 120393);
                 StudentState.Instance.AddStress(Random.Range(-5, 6));
                 Time.timeScale = 0;

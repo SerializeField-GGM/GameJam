@@ -31,6 +31,7 @@ namespace JUNSUNG
         private bool isEnd = false;
         private bool isStart = false;
 
+        
         private void Awake()
         {
             startTextTrm = GameObject.Find("Canvas/TextPanel/StartText").GetComponent<RectTransform>();
@@ -64,8 +65,6 @@ namespace JUNSUNG
 
         private void Start()
         {
-            Debug.Log(Camera.main.ScreenToWorldPoint(new Vector3(0, 158, 0)));
-            Debug.Log(startTextTrm.transform.position);
             StartCoroutine(FadeEffect(0, 1));
         }
 
@@ -92,26 +91,47 @@ namespace JUNSUNG
         {
             currentArrow = boxTrm.GetChild(0).gameObject;
 
+
             for (int i = 0; i < boxTrm.childCount; i++)
             {
                 boxTrm.GetChild(i).transform.position = new Vector2(boxTrm.position.x + i * 4, boxTrm.position.y);
             }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) && currentArrow.name == "UpArrow")
+            if(Input.GetKeyDown(KeyCode.RightArrow)) 
             {
-                ShortLogic();
+                if(currentArrow.gameObject.name == "RightArrow") 
+                    ShortLogic();
+                else 
+                {
+                    time -= 0.2f;
+                }
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow) && currentArrow.name == "DownArrow")
+            if(Input.GetKeyDown(KeyCode.UpArrow)) 
             {
-                ShortLogic();
+                if(currentArrow.gameObject.name == "UpArrow") 
+                    ShortLogic();
+                else 
+                {
+                    time -= 0.2f;
+                }
             }
-            if (Input.GetKeyDown(KeyCode.RightArrow) && currentArrow.name == "RightArrow")
+            if(Input.GetKeyDown(KeyCode.DownArrow)) 
             {
-                ShortLogic();
+                if(currentArrow.gameObject.name == "DownArrow") 
+                    ShortLogic();
+                else 
+                {
+                    time -= 0.2f;
+                }
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && currentArrow.name == "LeftArrow")
+            if(Input.GetKeyDown(KeyCode.LeftArrow)) 
             {
-                ShortLogic();
+                if(currentArrow.gameObject.name == "LeftArrow") 
+                    ShortLogic();
+                else 
+                {
+                    time -= 0.2f;
+                }
             }
         }
 
@@ -162,14 +182,13 @@ namespace JUNSUNG
                 yield return new WaitForSeconds(1);
                 startText.SetText(i.ToString());
                 if(i == 0) { startText.SetText("시작!"); }
-                startTextTrm.DOMoveY(145f, 1);
+                startTextTrm.DOMove(Camera.main.WorldToScreenPoint(Vector3.zero), 1);
                 currentTime = 0;
                 percent = 0;
 
                 while (percent < 1)
                 {
                     currentTime += Time.deltaTime;
-                    Debug.Log(currentTime);
                     percent = currentTime / fadeTime;
             
                     color.a = Mathf.Lerp(start, end, percent);

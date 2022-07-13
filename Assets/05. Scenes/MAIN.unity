@@ -3594,6 +3594,7 @@ GameObject:
   - component: {fileID: 468048639}
   - component: {fileID: 468048638}
   - component: {fileID: 468048641}
+  - component: {fileID: 468048642}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3762,6 +3763,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &468048642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468048637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10301c944ab1d9479834fa0bec82e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 468048639}
+  shakeRange: 0.05
+  duration: 0.5
 --- !u!1 &482085614
 GameObject:
   m_ObjectHideFlags: 0

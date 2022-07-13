@@ -111,7 +111,6 @@ namespace Core
         private void Start()
         {
             std = DataManager.Instance.std;
-
             countT.text = $"학생수\t\t\t\t\t\t{std.count}명";
 
             stressS.value = std.stress;

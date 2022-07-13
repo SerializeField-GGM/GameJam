@@ -24,6 +24,7 @@ namespace SEH00N
         {
             randIndex = Random.Range(0, texts.Count);
             tmp.text = $"제시어: {texts[randIndex]}";
+            inputField.ActivateInputField();
             //StartCoroutine(MakeText());
         }
 

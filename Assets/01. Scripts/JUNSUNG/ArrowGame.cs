@@ -165,7 +165,7 @@ namespace JUNSUNG
             {
                 isEnd = true;
                 endPanel.SetActive(true);
-                GetMoney = score * 1000000;
+                GetMoney = score * 2500;
                 MoneyManager.Instance.SetMoney(GetMoney);
                 endPanel.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"{GetMoney}원 획득";
             }

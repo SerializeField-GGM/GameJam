@@ -46,7 +46,7 @@ namespace JIEUN
                 gameoverPanel.SetActive(true);
                 isOver = true;
                 int randStress = Random.Range(-5, 6);
-                int getMoney = ScoreManager.Instance.dustCount * 120393;
+                int getMoney = ScoreManager.Instance.dustCount * 2100;
                 if(randStress > 0)
                     gameovertxt.text = $"에잇시팔\n스트레스 +{randStress}\n{getMoney}원";
                 else

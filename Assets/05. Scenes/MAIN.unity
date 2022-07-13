@@ -3830,9 +3830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10301c944ab1d9479834fa0bec82e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 468048639}
-  shakeRange: 0.05
-  duration: 0.5
 --- !u!1 &482085614
 GameObject:
   m_ObjectHideFlags: 0
@@ -13946,6 +13943,7 @@ MonoBehaviour:
   poolingList:
   - {fileID: 8251695210523833095, guid: ad5553e67d16bfd46846711b8124c299, type: 3}
   main: {fileID: 374449974}
+  pooler: {fileID: 0}
 --- !u!4 &1645665711
 Transform:
   m_ObjectHideFlags: 0

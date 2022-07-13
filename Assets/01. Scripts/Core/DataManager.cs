@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace Core
 {
@@ -6,7 +7,7 @@ namespace Core
     {
         public static DataManager Instance = null;
 
-        public SchoolData sd;
+        public SchoolData sd;   
         public StudentData std;
 
         private void Awake()
@@ -15,11 +16,11 @@ namespace Core
 
             string sdJSON = PlayerPrefs.GetString("sdJSON", null);
             string stdJSON = PlayerPrefs.GetString("stdJSON", null);
-            
-            if(sdJSON == null) sd = new SchoolData() { money = 0, fame = 0 };
+          
+            if(sdJSON.Length == 0) sd = new SchoolData() { money = 0, fame = 0, facilities = new List<string>() };
             else sd = JsonUtility.FromJson<SchoolData>(sdJSON);
             
-            if(stdJSON == null) std = new StudentData() { stress = 0, talent  = 0, passion = 0, count = 0 };
+            if(sdJSON.Length == 0) std = new StudentData() { stress = 0, talent  = 0, passion = 0, count = 0 };
             else std = JsonUtility.FromJson<StudentData>(stdJSON);
         }
 

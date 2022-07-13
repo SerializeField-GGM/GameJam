@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using JUNSUNG;
 
 namespace JUNE
 {
     public class Ramen : MonoBehaviour
     {
         [SerializeField] GameObject Cabinet;
+        [SerializeField] AudioClip ramenttang;
         RectTransform rectTransform;
         private void Awake()
         {
@@ -20,6 +22,7 @@ namespace JUNE
         {
             if(other.gameObject == Cabinet)
             {
+                SoundControll.Instance.PlayButtonSound(ramenttang);
                 gameObject.SetActive(false);
             }
         }

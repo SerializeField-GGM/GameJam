@@ -5,7 +5,7 @@ namespace UI
 {
     public class PopUp : Buttons
     {
-        [SerializeField] RectTransform contents;
+        [SerializeField] RectTransform contents, contents2;
         [SerializeField] float duration;
         public void DoPopUp(RectTransform rt)
         {

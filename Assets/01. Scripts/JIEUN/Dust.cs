@@ -1,12 +1,14 @@
 using Core;
 using UnityEngine;
 using UnityEngine.UI;
+using JUNSUNG;
 
 namespace JIEUN
 {
     public class Dust : PoolableMono
     {
         private Image image = null;
+        [SerializeField] AudioClip dustCleanSound;
 
         private void Awake() {
             image = GetComponent<Image>();
@@ -25,6 +27,7 @@ namespace JIEUN
 
             if(image.color.a <= 0)
             {
+                SoundControll.Instance.PlayButtonSound(dustCleanSound);
                 transform.SetParent(GameManager.Instance.pooler);
                 ScoreManager.Instance.dustCount++;
                 PoolManager.Instance.Push(this);

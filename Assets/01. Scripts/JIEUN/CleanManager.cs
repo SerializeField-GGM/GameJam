@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using Core;
 using System.Collections;
 using TMPro;
+using JUNSUNG;
 
 namespace JIEUN
 {
@@ -16,6 +17,7 @@ namespace JIEUN
         [SerializeField] Slider timer = null;
         [SerializeField] float currentTime = 0;
         [SerializeField] float maxTime = 25;
+        [SerializeField] AudioClip minigameAudio;
         public int i ;//{ get; set; }s
         private bool isOver = false;
         private Transform canvas;
@@ -31,6 +33,7 @@ namespace JIEUN
             cam = Camera.main;
 
             gameoverPanel.SetActive(false);
+            BGMControll.Instance.PlayButtonSound(minigameAudio);
         }
 
         private void Update() 

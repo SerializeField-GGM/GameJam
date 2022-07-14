@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using JUNSUNG;
 
 public class EatingText : MonoBehaviour
 {
     Text eatText;
+    [SerializeField] AudioClip hululukJJapJJap;
     private void Awake()
     {
         eatText = GetComponent<Text>();
@@ -16,6 +18,7 @@ public class EatingText : MonoBehaviour
     {
         eatText.text = "먹는중";
         StartCoroutine(ShowText());
+        BGMControll.Instance.PlayButtonSound(hululukJJapJJap);
     }
 
     IEnumerator ShowText()

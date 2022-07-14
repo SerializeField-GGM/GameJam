@@ -243,6 +243,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 839074732}
+        m_TargetAssemblyTypeName: JUNE.IntroButtonClick, JUNE
+        m_MethodName: IntroButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &179995622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,6 +628,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 839074732}
+        m_TargetAssemblyTypeName: JUNE.IntroButtonClick, JUNE
+        m_MethodName: IntroButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &460809286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,6 +812,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 839074732}
+        m_TargetAssemblyTypeName: JUNE.IntroButtonClick, JUNE
+        m_MethodName: IntroButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &575313412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,7 +844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e47da603dcb96804eb75ac420e93398d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ebe5aeaac8289e4facc9240c898b65e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -826,6 +862,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575313408}
   m_CullTransparentMesh: 1
+--- !u!1 &839074730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 839074731}
+  - component: {fileID: 839074732}
+  m_Layer: 0
+  m_Name: IntroButtonClick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &839074731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839074730}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -98, z: 0}
+  m_LocalScale: {x: 2.9906542, y: 2.9906542, z: 2.9906542}
+  m_Children: []
+  m_Father: {fileID: 879841826}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &839074732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839074730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d8e6ed90dbf834c99e8e8433f9fa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introButtonClick: {fileID: 8300000, guid: 53dec14ae1802ca419000d2506014484, type: 3}
 --- !u!1 &879841822
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +1006,7 @@ RectTransform:
   - {fileID: 2024514162}
   - {fileID: 295370980}
   - {fileID: 1516047286}
+  - {fileID: 839074731}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -945,6 +1026,7 @@ GameObject:
   - component: {fileID: 937618796}
   - component: {fileID: 937618798}
   - component: {fileID: 937618797}
+  - component: {fileID: 937618799}
   m_Layer: 5
   m_Name: BG
   m_TagString: Untagged
@@ -1009,6 +1091,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937618795}
   m_CullTransparentMesh: 1
+--- !u!114 &937618799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937618795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d15c019013b6e2438c084b277101eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introBGMSound: {fileID: 8300000, guid: bc333dabbb504bb4987963246901a1fb, type: 3}
 --- !u!1 &1067254713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1558,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1701921552}
         m_TargetAssemblyTypeName: Twinkle, UI
         m_MethodName: DoTwinkle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 839074732}
+        m_TargetAssemblyTypeName: JUNE.IntroButtonClick, JUNE
+        m_MethodName: IntroButtonClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

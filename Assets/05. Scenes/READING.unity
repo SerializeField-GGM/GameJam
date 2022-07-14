@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 15
-  timeText: {fileID: 0}
+  timeText: {fileID: 1471771841}
   scoreText: {fileID: 1455132448}
   currentArrow: {fileID: 0}
   boxTrm: {fileID: 1214872088}

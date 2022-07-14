@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 244671368}
   - component: {fileID: 244671369}
   - component: {fileID: 244671367}
+  - component: {fileID: 244671370}
   m_Layer: 5
   m_Name: 'Ramen '
   m_TagString: Untagged
@@ -432,6 +433,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &244671370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244671362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a70ced3ef1392d45abbdcdd102985dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &310538471
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,7 +798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &506168709
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2713,6 +2726,7 @@ GameObject:
   - component: {fileID: 1750277720}
   - component: {fileID: 1750277721}
   - component: {fileID: 1750277719}
+  - component: {fileID: 1750277722}
   m_Layer: 5
   m_Name: Soup
   m_TagString: Untagged
@@ -2799,7 +2813,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2857,56 +2871,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1803540532
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1803540534}
-  - component: {fileID: 1803540533}
-  m_Layer: 0
-  m_Name: RamenManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1803540533
+--- !u!114 &1750277722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803540532}
+  m_GameObject: {fileID: 1750277714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aff857313f964fe4b9107a3e46934d34, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a70ced3ef1392d45abbdcdd102985dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cntSprite:
-  - {fileID: 21300000, guid: e3cdab859cf37c1469676badbcda93d7, type: 3}
-  - {fileID: 21300000, guid: a1dbe6fcc49b9c848a305b6e1cd71af1, type: 3}
-  - {fileID: 21300000, guid: 50bec8cafc2d2df42a4570d7669ec87c, type: 3}
-  - {fileID: 21300000, guid: b7b9fc6a30ed1d94e885028a4ee5efba, type: 3}
-  cntImage: {fileID: 1534615503}
-  fadeTime: 1
---- !u!4 &1803540534
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803540532}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 173.48875, y: 158.91006, z: -189.32661}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805419702
 GameObject:
   m_ObjectHideFlags: 0
@@ -3652,6 +3628,7 @@ GameObject:
   - component: {fileID: 2096309709}
   - component: {fileID: 2096309707}
   - component: {fileID: 2096309708}
+  - component: {fileID: 2096309710}
   m_Layer: 5
   m_Name: Broom
   m_TagString: Untagged
@@ -3782,6 +3759,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2096309710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096309703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a70ced3ef1392d45abbdcdd102985dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2106261758
 GameObject:
   m_ObjectHideFlags: 0

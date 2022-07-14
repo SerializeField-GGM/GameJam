@@ -16,7 +16,7 @@ namespace JUNE
         }
         private void OnEnable()
         {
-            rectTransform.localPosition = new Vector3(-42,-160);
+            rectTransform.localPosition = new Vector3(-14,-350);
         }
         private void OnTriggerEnter2D(Collider2D other)
         {

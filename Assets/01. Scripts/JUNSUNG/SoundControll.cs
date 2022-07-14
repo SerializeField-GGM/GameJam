@@ -13,6 +13,7 @@ namespace JUNSUNG
 
         private void Awake()
         {
+            DontDestroyOnLoad(this);
             slider = GetComponent<Slider>(); 
             effectAudioSource = GameObject.Find("EffectSoundPlayer").GetComponent<AudioSource>();
         }

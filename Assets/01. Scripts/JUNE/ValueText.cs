@@ -16,12 +16,14 @@ namespace JUNE
 
         private void OnEnable()
         {
+            Color c = valueText.color;
+            c.a = 1;
+            valueText.color = c;
             StartCoroutine(Disappear());
         }
 
         IEnumerator Disappear()
         {
-            Debug.Log("123");
             float currentTime = 0;
             float percent = 0;
             while(percent < 1)
@@ -34,7 +36,6 @@ namespace JUNE
                 valueText.color = c;
                 yield return null;
             }
-            valueText.text = null;
         }
     }
 }

@@ -9,39 +9,42 @@ namespace JUNE
 {
     public class ValueDoMove : MonoBehaviour
     {
+        [SerializeField] Transform trm;
+        Camera cam = null;
         RectTransform rt;
         Image image;
         private void Awake()
         {
-            transform.parent = GameObject.Find("TextCanvas").transform;
-            image = GetComponent<Image>();
+            trm =  GameObject.Find("TextSpawnPos").transform;
+            cam = Camera.main;
+            //image = GetComponent<Image>();
             rt = GetComponent<RectTransform>();
         }
         private void OnEnable()
         {
-            Color c = image.color;
-            c.a = 1;
-            image.color = c;
-
-            rt.DOLocalMoveY(rt.localPosition.y,1f);
+            transform.parent = GameObject.Find("TextCanvas").transform;
+            rt.localPosition = new Vector3(0, 100);
+            //image.color = Color.white;
+            rt.DOLocalMove(new Vector3(0, transform.localPosition.y + 100), 2f);
             StartCoroutine(Disappear());
         }
 
         IEnumerator Disappear()
         {
-            float currentTime = 0;
-            float percent = 0;
-            while(percent < 1)
-            {
-                currentTime += Time.deltaTime;
-                percent = currentTime / 1;
+            // float currentTime = 0;
+            // float percent = 0;
+            // while(percent < 1)
+            // {
+            //     currentTime += Time.deltaTime;
+            //     percent = currentTime / 3;
 
-                Color c = image.color;
-                c.a = 1 - percent;
-                image.color = c;
-                yield return null;
-            }
-            yield return new WaitForSeconds(0.001f);
+            //     Color c = image.color;
+            //     c.a = 1 - percent;
+            //     image.color = c;
+            //     yield return null;
+            // }
+            yield return new WaitForSeconds(2f);
+            transform.SetParent(GameManager.Instance.pooler);
             PoolManager.Instance.Push(GetComponent<PoolableMono>());
         }
     }

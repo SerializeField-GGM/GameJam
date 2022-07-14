@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/05. Scenes/CLEAN.unity
     guid: 65e0ef993d8f3e84fb342feb355c2043
+  - enabled: 1
+    path: Assets/05. Scenes/READING.unity
+    guid: 0dc4cffbeb884e14095d48a82ade8cbb
   m_configObjects: {}

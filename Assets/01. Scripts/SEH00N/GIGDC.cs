@@ -7,6 +7,19 @@ namespace SEH00N
     {
         [SerializeField] float talentMin, talentMax, fameMin, fameMax;
 
+        private void Start()
+        {
+            temp = PlayerPrefs.GetInt("GIGDC", 0);
+
+            if(temp == 1)
+                button.interactable = false;
+        }
+
+        private void OnDisable()
+        {
+            PlayerPrefs.SetInt("GIGDC", temp);
+        }
+
         public void DoEvent()
         {
             OnClick();

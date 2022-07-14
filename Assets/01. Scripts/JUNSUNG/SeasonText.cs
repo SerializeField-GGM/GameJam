@@ -19,12 +19,22 @@ namespace JUNSUNG
             seasonText = GetComponent<TextMeshProUGUI>();
         }
 
-        public void TextSeason()//TimeManager DoPopUPÀÌº¥Æ®¿¡ ³Ö¾îµÒ
+        public void TextSeason()//TimeManager DoPopUPï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½
         {
-            if (timeManager.season == TimeManager.Season.Spring) { seasonString = "°Ü¿ïÀÌ  °¡°í  º½ÀÌ  ¿Ô½À´Ï´Ù."; }
-            if (timeManager.season == TimeManager.Season.Summer) { seasonString = "º½ÀÌ  °¡°í  ¿©¸§ÀÌ  ¿Ô½À´Ï´Ù."; }
-            if (timeManager.season == TimeManager.Season.Fall) { seasonString = "¿©¸§ÀÌ  °¡°í  °¡À»ÀÌ  ¿Ô½À´Ï´Ù."; }
-            if (timeManager.season == TimeManager.Season.Winter) { seasonString = "°¡À»ÀÌ  °¡°í  °Ü¿ïÀÌ  ¿Ô½À´Ï´Ù."; }
+            if (timeManager.season == TimeManager.Season.Winter)
+            {
+                seasonString = $"ê°€ì„ì´ ê°€ê³  ë´„ì´ ì™”ìŠµë‹ˆë‹¤.";
+                seasonString += $"\nì§€ì›ê¸ˆ + {timeManager.inMoneyAm}";
+                seasonString += $"\n í•™ìƒìˆ˜ + {timeManager.inStudentAm}";
+                seasonString += $"\nëª…ì„± + {timeManager.inFameAm}";
+            }
+            else
+            {
+                if (timeManager.season == TimeManager.Season.Spring) { seasonString = $"ê²¨ìš¸ì´ ê°€ê³  ë´„ì´ ì™”ìŠµë‹ˆë‹¤."; }
+                if (timeManager.season == TimeManager.Season.Summer) { seasonString = $"ë´„ì´ ê°€ê³  ì—¬ë¦„ì´ ì™”ìŠµë‹ˆë‹¤."; }
+                if (timeManager.season == TimeManager.Season.Fall) { seasonString = $"ì—¬ë¦„ì´ ê°€ê³  ê°€ì„ì´ ì™”ìŠµë‹ˆë‹¤."; }
+                seasonString += $"\nì§€ì›ê¸ˆ + {timeManager.inMoneyAm}";
+            }
 
             seasonText.SetText(seasonString);
         }

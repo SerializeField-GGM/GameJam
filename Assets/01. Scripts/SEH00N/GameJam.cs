@@ -7,6 +7,19 @@ namespace SEH00N
     {
         [SerializeField] float passionMin, passionMax, stressMin, stressMax;
 
+        private void Start()
+        {
+            temp = PlayerPrefs.GetInt("GameJam", 0);
+
+            if(temp == 1)
+                button.interactable = false;
+        }
+
+        private void OnDisable()
+        {
+            PlayerPrefs.SetInt("GameJam", temp);
+        }
+
         public void DoEvent()
         {
             OnClick();

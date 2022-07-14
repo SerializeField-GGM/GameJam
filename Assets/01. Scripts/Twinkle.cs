@@ -1,8 +1,9 @@
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine;
+using UI;
 
-public class Twinkle : MonoBehaviour
+public class Twinkle : Buttons
 {
     private Image image = null;
 
@@ -21,5 +22,6 @@ public class Twinkle : MonoBehaviour
         seq.Append(image.DOFade(1, 0.1f));
         seq.Append(image.DOFade(0, 0.1f));
         seq.Append(image.DOFade(1, 0.1f));
+        Init();
     }
 }

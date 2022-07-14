@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using System;
 
 namespace Core
 {
@@ -8,6 +9,7 @@ namespace Core
     {
         public static TimeManager Instance = null;
 
+        [Serializable]
         public enum Season
         {
             Spring = 0,
@@ -16,18 +18,35 @@ namespace Core
             Winter = 3,
         }
 
+        [SerializeField] UnityEvent doSlideleft, doPopup, doSlideright, doPopdown;
         [SerializeField] long balancing = 1000;
         public float currentTime = 0;
         public float delay = 900;
-        [SerializeField] UnityEvent doSlideleft, doPopup, doSlideright, doPopdown;
         public Season season = Season.Spring;
         public bool onChanging = false;
         private StudentData std = null;
         private SchoolData sd = null;
+        public int inFameAm = 0;
+        public long inMoneyAm = 0;
+        public int inStudentAm = 0;
 
         private void Awake()
         {
             if (Instance == null) Instance = this;
+
+            string JSON = PlayerPrefs.GetString("SeasonJSON", null);
+
+            if(JSON.Length == 0) season = Season.Spring;
+            else season = JsonUtility.FromJson<Season>(JSON);
+
+            currentTime = PlayerPrefs.GetFloat("CurrentTime", 0);
+        }
+
+        private void OnDisable()
+        {
+            string JSON = JsonUtility.ToJson(season);
+            PlayerPrefs.SetString("SeasonJSON", JSON);
+            PlayerPrefs.SetFloat("CurrentTime", currentTime);
         }
 
         private void Start()
@@ -56,12 +75,15 @@ namespace Core
                 StartCoroutine(ChangeSeason());
                 onChanging = true;
                 currentTime = 0;
-                MoneyManager.Instance.SetMoney(sd.fame * balancing);
+                inMoneyAm = sd.fame * balancing;
+                MoneyManager.Instance.SetMoney(inMoneyAm);
                 if (season == Season.Winter)
                 {
-                    if(std.talent > 40) FameManager.Instance.SetFame((int)(std.count * 0.002f));
-                    else FameManager.Instance.SetFame(-(int)(std.count * 0.002f));
-                    StudentState.Instance.AddStudent((int)(sd.fame * 0.6f)); 
+                    if(std.talent > 40) inFameAm = (int)(std.count * 0.002f);
+                    else inFameAm = -(int)(std.count * 0.002f);
+                    inStudentAm = (int)(sd.fame * 0.6f);
+                    FameManager.Instance.SetFame(inFameAm);
+                    StudentState.Instance.AddStudent(inStudentAm); 
                     season = 0; return;
                 }
                 season++;

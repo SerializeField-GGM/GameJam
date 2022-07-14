@@ -15,7 +15,8 @@ namespace SEH00N
         protected bool isPressed = false;
         protected TextMeshProUGUI eventText;
         protected Button button = null;
-        private void Start()
+        protected int temp = 0;
+        private void Awake()
         {
             button = GetComponent<Button>();
             eventText = GameObject.Find("EventText").GetComponent<TextMeshProUGUI>();
@@ -24,6 +25,9 @@ namespace SEH00N
         {
             if (isPressed || TimeManager.Instance.season != season)
                 button.interactable = false;
+
+            if(isPressed) temp = 1;
+            else temp = 0;
         }
         private void LateUpdate()
         {

@@ -21,6 +21,14 @@ namespace Core
         public Season season = Season.Spring;
         [SerializeField] float currentTime = 0;
         private bool onChanging = false;
+        private StudentData std = null;
+        private SchoolData sd = null;
+
+        private void Start()
+        {
+            std = DataManager.Instance.std;
+            sd = DataManager.Instance.sd;
+        }
 
         private void Update()
         {
@@ -44,7 +52,7 @@ namespace Core
                 onChanging = true;
                 currentTime = 0;
                 MoneyManager.Instance.SetMoney(DataManager.Instance.sd.fame * balancing);
-                if (season == Season.Winter) { season = 0; return; }
+                if (season == Season.Winter) { StudentState.Instance.AddStudent((int)(sd.fame * 0.6f)); season = 0; return; }
                 season++;
             }
         }

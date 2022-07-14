@@ -2,10 +2,11 @@ using Core;
 using UnityEngine;
 using UnityEngine.UI;
 using JUNE;
+using UI;
 
 namespace SEH00N
 {
-    public class FacilitiesData : MonoBehaviour
+    public class FacilitiesData : Buttons
     {
         [SerializeField] string facilitieName;
         [SerializeField] long fame, cost;
@@ -28,6 +29,7 @@ namespace SEH00N
                 fm.GetFame(fame);
                 sd.facilities.Add(facilitieName);
                 GetComponentInChildren<Button>().interactable = false;
+                Init();
             }
         }
     }

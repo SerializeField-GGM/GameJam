@@ -232,10 +232,9 @@ MonoBehaviour:
   dust: {fileID: 8251695210523833095, guid: ad5553e67d16bfd46846711b8124c299, type: 3}
   min: {fileID: 1701598173}
   max: {fileID: 663506517}
-  scorePanel: {fileID: 0}
   timer: {fileID: 1755150697}
   currentTime: 0
-  maxTime: 3
+  maxTime: 25
   i: 0
 --- !u!4 &136723192
 Transform:

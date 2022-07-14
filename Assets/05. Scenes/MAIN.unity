@@ -3662,7 +3662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: cc8f55f902695ad4b87d11d44853cb93, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3964,6 +3964,7 @@ MonoBehaviour:
   passionInAm: 0.1
   passionDeAm: -0.1
   moneyInAm: 1
+  delay: 0.5
   trm: {fileID: 592525991}
 --- !u!1 &644465805
 GameObject:
@@ -8761,7 +8762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b583c72e944006948839825f4b4db5fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -19,13 +19,13 @@ namespace Core
         void Start()
         {
             sd = DataManager.Instance.sd;
-            fame.text = "명성 : " + sd.fame;
+            fame.text = " : " + sd.fame;
         }
 
         public void SetFame(long value)
         {
-            sd.fame -= value;
-            fame.text = "명성 : " + sd.fame;
+            sd.fame += value;
+            fame.text = " : " + sd.fame;
         }
     }
 }

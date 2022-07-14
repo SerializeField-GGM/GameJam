@@ -32,6 +32,7 @@ namespace Core
 
         private void Awake()
         {
+            //PlayerPrefs.DeleteAll();
             if (Instance == null) Instance = this;
 
             string JSON = PlayerPrefs.GetString("SeasonJSON", null);

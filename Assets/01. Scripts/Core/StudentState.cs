@@ -110,34 +110,34 @@ namespace Core
         private void Start()
         {
             std = DataManager.Instance.std;
-            countT.text = $"학생수\t\t\t\t\t\t{std.count}명";
+            countT.text = $"학생수\t\t\t{std.count}명";
             stressS.value = std.stress;
-            stressT.text = $"스트레스\t\t\t\t\t\t\t\t\t\t\t\t{(std.stress).ToString("+0.0")}%";
+            stressT.text = $"스트레스\t\t\t\t{(std.stress).ToString("+0.0")}%";
             passionS.value = std.passion;
-            passionT.text = $"열정\t\t\t\t\t\t\t\t\t\t\t\t\t{(std.passion).ToString("+0.0")}%";
+            passionT.text = $"열정\t\t\t\t\t{(std.passion).ToString("+0.0")}%";
             talentS.value = std.talent;
-            talentT.text = $"능력\t\t\t\t\t\t\t\t\t\t\t\t\t{(std.talent).ToString("+0.0")}%";
+            talentT.text = $"능력\t\t\t\t\t{(std.talent).ToString("+0.0")}%";
         }
 
         public void AddStress(float value)
         {
             std.stress += value;
             std.stress = Mathf.Clamp(std.stress, 0, 100);
-            stressT.text = $"스트레스\t\t\t\t\t\t\t\t\t\t\t\t{(std.stress).ToString("+0.0")}%";
+            stressT.text = $"스트레스\t\t\t\t{(std.stress).ToString("+0.0")}%";
             stressS.value += value;
         }
         public void AddPassion(float value)
         {
             std.passion += value;
             std.passion = Mathf.Clamp(std.passion, 0, 100);
-            passionT.text = $"열정\t\t\t\t\t\t\t\t\t\t\t\t\t{(std.passion).ToString("+0.0")}%";
+            passionT.text = $"열정\t\t\t\t\t{(std.passion).ToString("+0.0")}%";
             passionS.value += value;
         }
         public void AddTalent(float value)
         {
             std.talent += value;
             std.talent = Mathf.Clamp(std.talent, 0, 100);
-            talentT.text = $"능력\t\t\t\t\t\t\t\t\t\t\t\t\t{(std.talent).ToString("+0.0")}%";
+            talentT.text = $"능력\t\t\t\t\t{(std.talent).ToString("+0.0")}%";
             talentS.value += value;
         }
 
@@ -145,7 +145,7 @@ namespace Core
         {
             std.count += value;
             std.talent = Mathf.Max(std.talent, 0);
-            countT.text = $"학생수\t\t\t\t\t\t{std.count}명";
+            countT.text = $"학생수\t\t\t\t\t{std.count}명";
         }
     }
 }

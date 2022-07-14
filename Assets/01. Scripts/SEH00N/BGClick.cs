@@ -23,7 +23,7 @@ namespace SEH00N
                 TextSpawn.Instance.SpawnText("소모할 스트레스가 부족합니다!!", trm.position);
                 return;
             }
-            TextSpawn.Instance.SpawnText($"스트레스 {stressDeAm}", trm.position);
+            TextSpawn.Instance.SpawnText($"스트레스 {stressDeAm}!!", trm.position);
             StudentState.Instance.AddStress(stressDeAm);
         }
 
@@ -32,7 +32,7 @@ namespace SEH00N
             StudentState.Instance.AddStress(stressInAm);
             StudentState.Instance.AddTalent(talentInAm);
 
-            TextSpawn.Instance.SpawnText($"스트레스 +{stressInAm}!!\n능력 +{talentInAm}", trm.position);
+            TextSpawn.Instance.SpawnText($"스트레스 +{stressInAm}!!\n능력 +{talentInAm}!!", trm.position);
         }
 
         public void StudyRoom()
@@ -40,7 +40,7 @@ namespace SEH00N
             StudentState.Instance.AddStress(stressInAm);
             StudentState.Instance.AddPassion(passionInAm);
 
-            TextSpawn.Instance.SpawnText($"스트레스 +{stressInAm}!!\n열정 +{passionInAm}", trm.position);
+            TextSpawn.Instance.SpawnText($"스트레스 +{stressInAm}!!\n열정 +{passionInAm}!!", trm.position);
         }
 
         public void PartTimeJob()
@@ -54,7 +54,7 @@ namespace SEH00N
             StudentState.Instance.AddPassion(passionDeAm);
             MoneyManager.Instance.SetMoney((long)moneyInAm);
 
-            TextSpawn.Instance.SpawnText($"열정 {passionDeAm}!!\n돈 +{moneyInAm}", trm.position);
+            TextSpawn.Instance.SpawnText($"열정 {passionDeAm}!!\n돈 +{moneyInAm}!!", trm.position);
         }
     }
 }

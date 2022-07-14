@@ -19,13 +19,13 @@ namespace Core
         private void Start()
         {
             sd = DataManager.Instance.sd;
-            money.text = "돈 : " + sd.money;
+            money.text = " : " + sd.money;
         }
 
         public void SetMoney(long value)
         {
             sd.money += value;
-            money.text = "돈 : " + sd.money;
+            money.text = " : " + sd.money;
         }
     }
 }

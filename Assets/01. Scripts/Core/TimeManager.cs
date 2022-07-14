@@ -32,7 +32,7 @@ namespace Core
 
         private void Awake()
         {
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
             if (Instance == null) Instance = this;
 
             string JSON = PlayerPrefs.GetString("SeasonJSON", null);
@@ -48,6 +48,7 @@ namespace Core
             string JSON = JsonUtility.ToJson(season);
             PlayerPrefs.SetString("SeasonJSON", JSON);
             PlayerPrefs.SetFloat("CurrentTime", currentTime);
+            PlayerPrefs.DeleteAll();
         }
 
         private void Start()
@@ -84,7 +85,10 @@ namespace Core
                     else inFameAm = -(int)(std.count * 0.002f);
                     inStudentAm = (int)(sd.fame * 0.6f);
                     FameManager.Instance.SetFame(inFameAm);
-                    StudentState.Instance.AddStudent(inStudentAm); 
+                    StudentState.Instance.AddStudent(inStudentAm);
+                    StudentState.Instance.AddStress(-std.stress);
+                    StudentState.Instance.AddPassion(-std.passion + 30);
+                    StudentState.Instance.AddTalent(-std.talent);
                     season = 0; return;
                 }
                 season++;

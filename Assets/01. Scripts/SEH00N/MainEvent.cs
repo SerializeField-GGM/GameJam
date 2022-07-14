@@ -18,10 +18,16 @@ namespace SEH00N
         protected int temp = 0;
         private void Awake()
         {
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
             button = GetComponent<Button>();
             eventText = GameObject.Find("EventText").GetComponent<TextMeshProUGUI>();
         }
+
+        private void OnDisable()
+        {
+            PlayerPrefs.DeleteAll();
+        }
+
         private void Update()
         {
             if (isPressed || TimeManager.Instance.season != season)

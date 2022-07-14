@@ -19,20 +19,20 @@ namespace JUNSUNG
             seasonText = GetComponent<TextMeshProUGUI>();
         }
 
-        public void TextSeason()//TimeManager DoPopUP�̺�Ʈ�� �־��
+        public void TextSeason()
         {
-            if (timeManager.season == TimeManager.Season.Winter)
+            if (timeManager.season == TimeManager.Season.Spring)
             {
-                seasonString = $"가을이 가고 봄이 왔습니다.";
+                seasonString = $"겨울이 가고 봄이 왔습니다. 신입생이 들어왔습니다.";
                 seasonString += $"\n지원금 + {timeManager.inMoneyAm}";
                 seasonString += $"\n 학생수 + {timeManager.inStudentAm}";
                 seasonString += $"\n명성 + {timeManager.inFameAm}";
             }
             else
             {
-                if (timeManager.season == TimeManager.Season.Spring) { seasonString = $"겨울이 가고 봄이 왔습니다."; }
                 if (timeManager.season == TimeManager.Season.Summer) { seasonString = $"봄이 가고 여름이 왔습니다."; }
                 if (timeManager.season == TimeManager.Season.Fall) { seasonString = $"여름이 가고 가을이 왔습니다."; }
+                if (timeManager.season == TimeManager.Season.Winter) { seasonString = $"가을이 가고 겨울이 왔습니다."; }
                 seasonString += $"\n지원금 + {timeManager.inMoneyAm}";
             }
 

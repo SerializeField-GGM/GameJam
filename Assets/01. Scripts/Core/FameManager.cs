@@ -1,16 +1,19 @@
-using Core;
 using UnityEngine;
 using TMPro;
 
-namespace JUNE
+namespace Core
 {
     public class FameManager : MonoBehaviour
     {
+        public static FameManager Instance = null;
+
         TextMeshProUGUI fame;
         private SchoolData sd = null;
 
         private void Awake()
         {
+            if(Instance == null) Instance = this;
+
             fame = GetComponent<TextMeshProUGUI>();
         }
 
@@ -20,16 +23,10 @@ namespace JUNE
             fame.text = "명성 : " + sd.fame;
         }
 
-        public void MinusFame(long minusFame)
+        public void SetFame(long value)
         {
-            sd.fame -= minusFame;
+            sd.fame -= value;
             fame.text = "명성 : " + sd.fame;
-        }
-
-        public void GetFame(long getFame)
-        {
-            sd.fame += getFame;
-            fame.text = "명성  : " + sd.fame;
         }
     }
 }

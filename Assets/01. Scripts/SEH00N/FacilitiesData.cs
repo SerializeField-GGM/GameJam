@@ -1,7 +1,6 @@
 using Core;
 using UnityEngine;
 using UnityEngine.UI;
-using JUNE;
 using UI;
 
 namespace SEH00N
@@ -26,7 +25,7 @@ namespace SEH00N
             if(sd.money >= cost)
             {
                 MoneyManager.Instance.SetMoney(-cost);
-                fm.GetFame(fame);
+                FameManager.Instance.SetFame(fame);
                 sd.facilities.Add(facilitieName);
                 GetComponentInChildren<Button>().interactable = false;
                 Init();

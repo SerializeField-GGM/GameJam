@@ -5,9 +5,9 @@ namespace Core
     [Serializable]
     public class StudentData
     {
-        public int stress;
-        public int talent;
-        public int passion;
+        public float stress;
+        public float talent;
+        public float passion;
         public int count;
     }
 }

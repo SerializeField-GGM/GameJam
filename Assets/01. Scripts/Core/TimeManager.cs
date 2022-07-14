@@ -16,10 +16,10 @@ namespace Core
         }
 
         [SerializeField] long balancing = 1000;
-        [SerializeField] float delay = 900;
+        [SerializeField] public float delay = 900;
         [SerializeField] UnityEvent doSlideleft, doPopup, doSlideright, doPopdown;
         public Season season = Season.Spring;
-        [SerializeField] float currentTime = 0;
+        [SerializeField] public float currentTime = 0;
         private bool onChanging = false;
         private StudentData std = null;
         private SchoolData sd = null;

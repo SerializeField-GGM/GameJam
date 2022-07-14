@@ -34,7 +34,8 @@ namespace JUNSUNG
         private bool isEnd = false;
         private bool isStart = false;
 
-        
+        [SerializeField] AudioClip successSound;
+        [SerializeField] AudioClip failSound;
         private void Awake()
         {
             cntImageTrm = cntImage.GetComponent<RectTransform>();
@@ -103,37 +104,53 @@ namespace JUNSUNG
             if(Input.GetKeyDown(KeyCode.RightArrow)) 
             {
                 if(currentArrow.gameObject.name == "RightArrow") 
+                {
                     ShortLogic();
+                    SuccessSoundPlay();
+                }
                 else 
                 {
                     time -= 0.2f;
+                    FailSound();
                 }
             }
             if(Input.GetKeyDown(KeyCode.UpArrow)) 
             {
-                if(currentArrow.gameObject.name == "UpArrow") 
+                if(currentArrow.gameObject.name == "UpArrow")
+                { 
                     ShortLogic();
+                    SuccessSoundPlay();
+                }
                 else 
                 {
                     time -= 0.2f;
+                    FailSound();
                 }
             }
             if(Input.GetKeyDown(KeyCode.DownArrow)) 
             {
                 if(currentArrow.gameObject.name == "DownArrow") 
+                {
                     ShortLogic();
+                    SuccessSoundPlay();
+                }
                 else 
                 {
                     time -= 0.2f;
+                    FailSound();
                 }
             }
             if(Input.GetKeyDown(KeyCode.LeftArrow)) 
             {
                 if(currentArrow.gameObject.name == "LeftArrow") 
+                {
                     ShortLogic();
+                    SuccessSoundPlay();
+                }
                 else 
                 {
                     time -= 0.2f;
+                    FailSound();
                 }
             }
         }
@@ -192,6 +209,15 @@ namespace JUNSUNG
             }
 
             isStart = true;
+        }
+
+        public void SuccessSoundPlay()
+        {
+            SoundControll.Instance.PlayButtonSound(successSound);
+        }
+        public void FailSound()
+        {
+            SoundControll.Instance.PlayButtonSound(failSound);
         }
     }
 }

@@ -286,6 +286,8 @@ MonoBehaviour:
   - {fileID: 8393655462888292981, guid: be569430ee2faaa4eadbd8f4e46eac08, type: 3}
   - {fileID: 3675921931291218022, guid: 4fa85b9f800d4d6479dd040487948022, type: 3}
   fadeTime: 1
+  successSound: {fileID: 8300000, guid: 4db51db762b7f784492c9de06c5fe10e, type: 3}
+  failSound: {fileID: 8300000, guid: 1b7e0ad2fe29b5e49800d7e2f3239e63, type: 3}
 --- !u!1 &728234129
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052006588}
   - component: {fileID: 1052006587}
+  - component: {fileID: 1052006589}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -513,6 +516,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052006589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052006586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961bdb1365c1ef049a2068fec4d6c91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  programmingBGMSound: {fileID: 8300000, guid: 8e2f838e00299bd46a05e7d9849cf9b1, type: 3}
 --- !u!1 &1214872086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,7 +1021,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "60\uC810\n"
+  m_text: "0\uC810\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
   m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
@@ -1139,7 +1155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "10\uCD08"
+  m_text: 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
   m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}

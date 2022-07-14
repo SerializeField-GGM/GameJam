@@ -6,28 +6,32 @@ using Core;
 
 namespace JUNSUNG
 {
-    public class BGMControll : MonoSingleton<BGMControll>
+    public class BGMControll : MonoBehaviour
     {
+        public static BGMControll Instance=  null;
+
         private Slider slider = null;
-        private AudioSource effectAudioSource = null;
+        private AudioSource BGMAudioSource = null;
 
         private void Awake()
         {
+            if(Instance == null) Instance = this;
+
             DontDestroyOnLoad(this);
             slider = GetComponent<Slider>(); 
-            effectAudioSource = GameObject.Find("BGMSoundPlayer").GetComponent<AudioSource>();
+            BGMAudioSource = GameObject.Find("BGMSoundPlayer").GetComponent<AudioSource>();
         }
 
         public void VolumeControll(AudioSource audioSource)
         {
-            audioSource.volume = slider.value;
+            BGMAudioSource.volume = slider.value;
         }
 
         public void PlayButtonSound(AudioClip clip)
         {
-            effectAudioSource.clip = clip;
-            effectAudioSource.Stop();
-            effectAudioSource.Play();
+            BGMAudioSource.clip = clip;
+            BGMAudioSource.Stop();
+            BGMAudioSource.Play();
         }
     }
 }

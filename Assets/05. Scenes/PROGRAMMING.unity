@@ -544,7 +544,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &586247297
@@ -1188,6 +1188,7 @@ GameObject:
   - component: {fileID: 1298116107}
   - component: {fileID: 1298116109}
   - component: {fileID: 1298116108}
+  - component: {fileID: 1298116110}
   m_Layer: 5
   m_Name: BG
   m_TagString: Untagged
@@ -1252,6 +1253,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298116106}
   m_CullTransparentMesh: 1
+--- !u!114 &1298116110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298116106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961bdb1365c1ef049a2068fec4d6c91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  programmingBGMSound: {fileID: 8300000, guid: 8bc4a28bd059ed446acc1831f324487a, type: 3}
 --- !u!1 &1452917838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +1913,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2117012673

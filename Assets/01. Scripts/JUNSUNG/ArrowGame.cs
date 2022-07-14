@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Core;
 using TMPro;
 using DG.Tweening;
@@ -12,13 +13,15 @@ namespace JUNSUNG
         [SerializeField] private float time = 30;
         [SerializeField] private TextMeshProUGUI timeText = null;
         [SerializeField] private TextMeshProUGUI scoreText = null;
-        [SerializeField] private TextMeshProUGUI startText = null;
         [SerializeField] private GameObject currentArrow = null;
         [SerializeField] private Transform boxTrm = null;
-        private RectTransform startTextTrm = null;
-        Vector3 startTextInitPos;
-        Color startTextInitColor;
+        [SerializeField] private Image cntImage = null; 
+        
+        private RectTransform cntImageTrm = null;   
+        Vector3 cntImageInitPos;
+        Color cntImageInitColor;
 
+        [SerializeField] private Sprite[] cnt = new Sprite[4];
         [SerializeField] private List<GameObject> _arrowList = new List<GameObject>();
         private List<GameObject> arrowList = new List<GameObject>();
 
@@ -34,7 +37,7 @@ namespace JUNSUNG
         
         private void Awake()
         {
-            startTextTrm = GameObject.Find("Canvas/TextPanel/StartText").GetComponent<RectTransform>();
+            cntImageTrm = cntImage.GetComponent<RectTransform>();
             endPanel = GameObject.Find("EndPanel").gameObject;
             endPanel.SetActive(false);
 
@@ -59,8 +62,8 @@ namespace JUNSUNG
 
             scoreText.text = "0점";
 
-            startTextInitPos = startTextTrm.transform.position;
-            startTextInitColor = startText.color;
+            cntImageInitPos = cntImageTrm.transform.position;
+            cntImageInitColor = cntImage.color;
         }
 
         private void Start()
@@ -135,18 +138,6 @@ namespace JUNSUNG
             }
         }
 
-        IEnumerator StartText()
-        {
-            int i = 3;
-
-            while (i >= 0)
-            {
-                yield return new WaitForSeconds(0.5f);
-                startText.text = $"{i}";
-                Sequence sq = DOTween.Sequence();
-            }
-        }
-
         private void ShortLogic()
         {
             currentArrow.SetActive(false);
@@ -167,7 +158,7 @@ namespace JUNSUNG
                 endPanel.SetActive(true);
                 GetMoney = score * 2500;
                 MoneyManager.Instance.SetMoney(GetMoney);
-                endPanel.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"{GetMoney}원 획득";
+                endPanel.transform.Find("MoneyText").GetComponent<TextMeshProUGUI>().text = $"{GetMoney}원 획득";
             }
         }
 
@@ -175,14 +166,13 @@ namespace JUNSUNG
         {
             float currentTime = 0;
             float percent = 0;
-            Color color = startText.color;
+            Color color = cntImage.color;
 
-            for (int i = 3; i >= 0; i--)
+            for (int i = 0; i < 4; i++)
             {
                 yield return new WaitForSeconds(1);
-                startText.SetText(i.ToString());
-                if(i == 0) { startText.SetText("시작!"); }
-                startTextTrm.DOMove(Camera.main.WorldToScreenPoint(Vector3.zero), 1);
+                cntImage.sprite = cnt[i];
+                cntImageTrm.DOMove(Camera.main.WorldToScreenPoint(new Vector3(0, 1.3f, 0)), 1);
                 currentTime = 0;
                 percent = 0;
 
@@ -192,13 +182,13 @@ namespace JUNSUNG
                     percent = currentTime / fadeTime;
             
                     color.a = Mathf.Lerp(start, end, percent);
-                    startText.color = color;
+                    cntImage.color = color;
 
                     yield return null;
                 }
-               
-                startTextTrm.transform.position = startTextInitPos;
-                startText.color = startTextInitColor;
+
+                cntImageTrm.transform.position = cntImageInitPos;
+                cntImage.color = cntImageInitColor;
             }
 
             isStart = true;

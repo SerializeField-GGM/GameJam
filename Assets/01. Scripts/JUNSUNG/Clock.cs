@@ -14,7 +14,7 @@ namespace JUNSUNG
         private void Awake()
         {
             fillImage = transform.Find("Image").transform.Find("FillImage").GetComponent<Image>();
-            timeManager = GameObject.Find("GameManager/TimeManager").GetComponent <TimeManager>();
+            timeManager = GameObject.Find("Main/TimeManager").GetComponent <TimeManager>();
         }
 
         private void Update()

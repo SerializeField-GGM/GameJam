@@ -15,7 +15,7 @@ namespace JUNSUNG
 
         private void Awake()
         {
-            timeManager = GameObject.Find("GameManager/TimeManager").GetComponent<TimeManager>();
+            timeManager = GameObject.Find("Main/TimeManager").GetComponent<TimeManager>();
             seasonText = GetComponent<TextMeshProUGUI>();
         }
 

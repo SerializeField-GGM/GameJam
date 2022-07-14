@@ -479,7 +479,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 358427169}
-  - component: {fileID: 358427168}
   - component: {fileID: 358427167}
   m_Layer: 0
   m_Name: EffectSoundPlayer
@@ -584,18 +583,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &358427168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 358427166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8a778e0217a33a48935f3174f23518c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &358427169
 Transform:
   m_ObjectHideFlags: 0
@@ -1699,7 +1686,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1538630165}
   - component: {fileID: 1538630164}
-  - component: {fileID: 1538630163}
   m_Layer: 0
   m_Name: BGMSoundPlayer
   m_TagString: Untagged
@@ -1707,18 +1693,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1538630163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538630162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cdd66abb0fa51e4e8fb04105c0e8b74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1538630164
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1944,6 +1918,11 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 839074732}
         m_TargetAssemblyTypeName: JUNE.IntroButtonClick, JUNE
         m_MethodName: IntroButtonClickSound
@@ -2007,6 +1986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!1 &1899776656
 GameObject:

@@ -1,10 +1,12 @@
 using Core;
 using UnityEngine;
+
 namespace SEH00N
 {
     public class FinalExam : MainEvent
     {
         [SerializeField] float stressMin, stressMax, talentMin, talentMax;
+
         public void DoEvent()
         {
             OnClick();
@@ -16,3 +18,4 @@ namespace SEH00N
         }
     }
 }
+

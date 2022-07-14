@@ -4,6 +4,7 @@ using UI;
 using Core;
 using UnityEngine.UI;
 using UnityEngine;
+
 namespace SEH00N
 {
     public class MainEvent : Buttons
@@ -12,7 +13,6 @@ namespace SEH00N
         [SerializeField] protected TimeManager.Season season;
         protected TimeManager.Season currentSeason;
         protected bool isPressed = false;
-        public bool a = false;
         protected TextMeshProUGUI eventText;
         protected Button button = null;
         private void Start()
@@ -22,7 +22,6 @@ namespace SEH00N
         }
         private void Update()
         {
-            a = TimeManager.Instance.season == season;
             if (isPressed || TimeManager.Instance.season != season)
                 button.interactable = false;
         }
@@ -47,6 +46,7 @@ namespace SEH00N
                 button.interactable = false;
             }
         }
+
         protected void OnClick()
         {
             isPressed = true;

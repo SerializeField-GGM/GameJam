@@ -10,12 +10,10 @@ namespace SEH00N
         [SerializeField] string facilitieName;
         [SerializeField] long fame, cost;
         private SchoolData sd = null;
-        private FameManager fm = null;
 
         private void Start()
         {
             sd = DataManager.Instance.sd;
-            fm = GameObject.Find("Fame").GetComponent<FameManager>();
             if(sd.facilities.Contains(facilitieName))
                 GetComponentInChildren<Button>().interactable = false;
         }

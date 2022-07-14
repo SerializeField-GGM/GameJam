@@ -1,10 +1,12 @@
 using UnityEngine;
 using Core;
+
 namespace SEH00N
 {
     public class Fastival : MainEvent
     {
         [SerializeField] float passionMin, passionMax, stressMin, stressMax;
+
         public void DoEvent()
         {
             OnClick();
@@ -16,3 +18,4 @@ namespace SEH00N
         }
     }
 }
+

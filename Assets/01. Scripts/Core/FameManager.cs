@@ -13,7 +13,6 @@ namespace Core
         private void Awake()
         {
             if(Instance == null) Instance = this;
-
             fame = GetComponent<TextMeshProUGUI>();
         }
 

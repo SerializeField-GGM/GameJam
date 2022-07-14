@@ -1,5 +1,3 @@
-using System.Globalization;
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;

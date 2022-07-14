@@ -1,10 +1,12 @@
 using UnityEngine;
 using Core;
+
 namespace SEH00N
 {
     public class GIGDC : MainEvent
     {
         [SerializeField] float talentMin, talentMax, fameMin, fameMax;
+
         public void DoEvent()
         {
             OnClick();
@@ -26,3 +28,4 @@ namespace SEH00N
         }
     }
 }
+

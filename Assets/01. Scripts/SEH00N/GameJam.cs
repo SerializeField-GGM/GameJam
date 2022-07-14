@@ -1,10 +1,12 @@
 using UnityEngine;
 using Core;
+
 namespace SEH00N
 {
     public class GameJam : MainEvent
     {
         [SerializeField] float passionMin, passionMax, stressMin, stressMax;
+
         public void DoEvent()
         {
             OnClick();
@@ -28,3 +30,4 @@ namespace SEH00N
         }
     }
 }
+

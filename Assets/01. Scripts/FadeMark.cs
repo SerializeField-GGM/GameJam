@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using JUNSUNG;
 
 public class FadeMark : MonoBehaviour
 {
     TextMeshProUGUI exclamationMark;
     [SerializeField] GameObject EatingPanel;
     [SerializeField] GameObject RoomPanel;
+    [SerializeField] AudioClip   WatchOut;
     void Awake()
     {
         exclamationMark = GetComponent<TextMeshProUGUI>();
@@ -17,6 +19,7 @@ public class FadeMark : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(MarkTwingkle());
+        SoundControll.Instance.PlayButtonSound(WatchOut);
     }
 
     private void OnDisable()

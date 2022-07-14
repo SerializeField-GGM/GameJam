@@ -235,6 +235,7 @@ MonoBehaviour:
   timer: {fileID: 1755150697}
   currentTime: 0
   maxTime: 25
+  minigameAudio: {fileID: 8300000, guid: 7d391ba695f3ac140953f9dcb7080f2d, type: 3}
   i: 0
 --- !u!4 &136723192
 Transform:

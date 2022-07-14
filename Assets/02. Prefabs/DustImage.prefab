@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce16669e44ba27478e2673beb1b7aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dustCleanSound: {fileID: 8300000, guid: 0de33b0b29cf6884da6366405e835c09, type: 3}

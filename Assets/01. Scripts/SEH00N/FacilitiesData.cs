@@ -2,6 +2,7 @@ using Core;
 using UnityEngine;
 using UnityEngine.UI;
 using UI;
+using JUNSUNG;
 
 namespace SEH00N
 {
@@ -9,6 +10,7 @@ namespace SEH00N
     {
         [SerializeField] string facilitieName;
         [SerializeField] long fame, cost;
+        [SerializeField] AudioClip shopBuyAudio;
         private SchoolData sd = null;
 
         private void Start()
@@ -22,6 +24,7 @@ namespace SEH00N
         {
             if(sd.money >= cost)
             {
+                SoundControll.Instance.PlayButtonSound(shopBuyAudio);
                 MoneyManager.Instance.SetMoney(-cost);
                 FameManager.Instance.SetFame(fame);
                 sd.facilities.Add(facilitieName);

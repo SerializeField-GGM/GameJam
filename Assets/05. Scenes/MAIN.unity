@@ -259,8 +259,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC2A4\uD2B8\uB808\uC2A4\\t\\t\\t\\t30%"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -615,8 +615,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 5\n1000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &142339835
@@ -948,18 +948,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &205382821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,8 +1184,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3112,6 +3100,7 @@ MonoBehaviour:
   facilitieName: "\uB3C4\uC11C\uAD00"
   fame: 150
   cost: 300000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &531032576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,6 +3195,7 @@ MonoBehaviour:
   facilitieName: "\uB9E4\uC810"
   fame: 20
   cost: 20000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &546294939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,8 +3255,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 45\n40000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3329,7 +3319,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &546294942
@@ -3536,8 +3526,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 250\n600000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3600,7 +3590,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &593909223
@@ -3670,8 +3660,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uB2A5\uB825\\t\\t\\t\\t\\t20%"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3935,6 +3925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!1 &625905169
 GameObject:
@@ -3988,6 +3979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 134232827}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!114 &625905172
 MonoBehaviour:
@@ -4201,6 +4193,7 @@ MonoBehaviour:
   moneyInAm: 1
   delay: 0.5
   trm: {fileID: 592525991}
+  bgGlickSound: {fileID: 8300000, guid: f9feb5922e6a09c4f816e55849d489cc, type: 3}
 --- !u!1 &644465805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,18 +4279,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1471947935}
         m_TargetAssemblyTypeName: SEH00N.FacilitiesData, SEH00N
         m_MethodName: Buy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5933,18 +5914,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &886011420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6055,8 +6024,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ' : '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6316,6 +6285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!114 &897929811
 MonoBehaviour:
@@ -6550,6 +6520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!114 &922632086
 MonoBehaviour:
@@ -6751,6 +6722,7 @@ MonoBehaviour:
   facilitieName: "\uD55C\uAD6D\uAC8C\uC784\uB9C8\uC774\uC2A4\uD130\uACE0"
   fame: 1000
   cost: 5000000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &964173586
 GameObject:
   m_ObjectHideFlags: 0
@@ -6900,6 +6872,7 @@ MonoBehaviour:
   facilitieName: "PC\uBC29"
   fame: 70
   cost: 100000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &973768682
 GameObject:
   m_ObjectHideFlags: 0
@@ -7343,6 +7316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!1 &1059091575
 GameObject:
@@ -7478,8 +7452,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 150\n300000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7542,7 +7516,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1082116913
@@ -7691,8 +7665,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 999999999\n10000000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7755,7 +7729,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1140835545
@@ -8104,18 +8078,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1188989339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8248,18 +8210,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1196529930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8357,8 +8307,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 10\n5000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8421,7 +8371,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1208373374
@@ -8629,6 +8579,7 @@ MonoBehaviour:
   facilitieName: "\uC4F0\uB808\uAE30\uD1B5"
   fame: 5
   cost: 1000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &1288541359
 GameObject:
   m_ObjectHideFlags: 0
@@ -8688,8 +8639,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD559\uC0DD\uC218\\t\\t\\t30\uBA85"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8918,6 +8869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!114 &1329450165
 MonoBehaviour:
@@ -9259,6 +9211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!1 &1361885808
 GameObject:
@@ -9394,8 +9347,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC5F4\uC815\\t\\t\\t\\t\\t10%"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9667,6 +9620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!114 &1410281052
 MonoBehaviour:
@@ -9868,6 +9822,7 @@ MonoBehaviour:
   facilitieName: "\uCCB4\uC721\uAD00"
   fame: 250
   cost: 600000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &1427729928
 GameObject:
   m_ObjectHideFlags: 0
@@ -10031,6 +9986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!114 &1445460826
 MonoBehaviour:
@@ -10413,6 +10369,7 @@ MonoBehaviour:
   facilitieName: "\uCE74\uD398"
   fame: 45
   cost: 40000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &1504080748
 GameObject:
   m_ObjectHideFlags: 0
@@ -10498,18 +10455,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1531947056}
         m_TargetAssemblyTypeName: SEH00N.FacilitiesData, SEH00N
         m_MethodName: Buy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10716,6 +10661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!1 &1512321766
 GameObject:
@@ -10971,6 +10917,7 @@ MonoBehaviour:
   facilitieName: "\uC790\uD310\uAE30"
   fame: 10
   cost: 5000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &1534349708
 GameObject:
   m_ObjectHideFlags: 0
@@ -11401,8 +11348,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD559\uC0DD\uC815\uBCF4"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11570,6 +11517,7 @@ MonoBehaviour:
   facilitieName: "\uAC9C\uB9C8\uACE0\uCEF4\uD37C\uB2C8"
   fame: 999999999
   cost: 10000000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &1626310984
 GameObject:
   m_ObjectHideFlags: 0
@@ -11655,18 +11603,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1425916592}
         m_TargetAssemblyTypeName: SEH00N.FacilitiesData, SEH00N
         m_MethodName: Buy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11831,6 +11767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 5
 --- !u!114 &1637649500
 MonoBehaviour:
@@ -12051,6 +11988,7 @@ MonoBehaviour:
   facilitieName: "\uB178\uB798\uBC29"
   fame: 100
   cost: 150000000
+  shopBuyAudio: {fileID: 8300000, guid: f13425cb332bd144db30f626b7659564, type: 3}
 --- !u!1 &1653567807
 GameObject:
   m_ObjectHideFlags: 0
@@ -12471,18 +12409,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1711528807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12711,6 +12637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!1 &1717115632
 GameObject:
@@ -13266,18 +13193,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1784061792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13602,18 +13517,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 447807268}
-        m_TargetAssemblyTypeName: JUNE.MainClickSound, JUNE
-        m_MethodName: ShopClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1837176448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13913,6 +13816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!114 &1894515811
 MonoBehaviour:
@@ -14354,8 +14258,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 100\n150000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14418,7 +14322,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1937319079
@@ -14488,8 +14392,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ' : '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14753,6 +14657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!1 &1947939783
 GameObject:
@@ -14949,8 +14854,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 1000\n5000000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15013,7 +14918,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1958725301
@@ -15174,8 +15079,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 70\n100000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15238,7 +15143,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1986792018
@@ -15861,6 +15766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!114 &2075795553
 MonoBehaviour:
@@ -16027,8 +15933,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA85\uC131 + 20\n20000000\uC6D0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
-  m_sharedMaterial: {fileID: -7948169317941307656, guid: e4fc39c5ee30d864398ed2ab3d2a2752, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16091,7 +15997,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2076345441
@@ -16253,6 +16159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.5
 --- !u!1 &2127104109
 GameObject:
@@ -16306,6 +16213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: {fileID: 0}
+  contents2: {fileID: 0}
   duration: 0.3
 --- !u!114 &2127104112
 MonoBehaviour:

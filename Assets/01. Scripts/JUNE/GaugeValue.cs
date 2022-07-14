@@ -34,7 +34,7 @@ namespace JUNE
         void Update()
         {
             totaltime += Time.deltaTime;
-            slider.value = totaltime / 15;
+            slider.value = totaltime / 10;
 
             if(slider.value == 1 && !isOver)
             {
@@ -51,7 +51,7 @@ namespace JUNE
             while(slider.value < 1)
             {
                 int random = Random.Range(1,101);
-                if(random <= 8)
+                if(random <= 13)
                 {
                     text.SetActive(true);
                     break;

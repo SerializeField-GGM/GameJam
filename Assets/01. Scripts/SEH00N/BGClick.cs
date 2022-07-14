@@ -1,5 +1,6 @@
 using Core;
 using UnityEngine;
+using JUNSUNG;
 
 namespace SEH00N
 {
@@ -11,7 +12,7 @@ namespace SEH00N
         private SchoolData sd = null;
         private float a = 0;
 
-
+        [SerializeField] AudioClip bgGlickSound;
         private void Start()
         {
             std = DataManager.Instance.std;
@@ -34,6 +35,7 @@ namespace SEH00N
             }
             TextSpawn.Instance.SpawnText($"스트레스 {stressDeAm}!!", trm.position);
             StudentState.Instance.AddStress(stressDeAm);
+            SoundControll.Instance.PlayButtonSound(bgGlickSound);
             a = 0;
         }
 
@@ -45,6 +47,7 @@ namespace SEH00N
             StudentState.Instance.AddTalent(talentInAm);
 
             TextSpawn.Instance.SpawnText($"스트레스 +{stressInAm}!!\n능력 +{talentInAm}!!", trm.position);
+            SoundControll.Instance.PlayButtonSound(bgGlickSound);
             a = 0;
         }
 
@@ -56,6 +59,7 @@ namespace SEH00N
             StudentState.Instance.AddPassion(passionInAm);
 
             TextSpawn.Instance.SpawnText($"스트레스 +{stressInAm}!!\n열정 +{passionInAm}!!", trm.position);
+            SoundControll.Instance.PlayButtonSound(bgGlickSound);
             a = 0;
         }
 
@@ -73,7 +77,7 @@ namespace SEH00N
             MoneyManager.Instance.SetMoney((long)moneyInAm);
 
             TextSpawn.Instance.SpawnText($"열정 {passionDeAm}!!\n돈 +{moneyInAm}!!", trm.position);
-
+            SoundControll.Instance.PlayButtonSound(bgGlickSound);
              a = 0;
         }
     }

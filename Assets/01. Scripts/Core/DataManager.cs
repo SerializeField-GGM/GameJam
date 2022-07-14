@@ -44,7 +44,7 @@ namespace Core
         {
             SaveSchoolData();
             SaveStudentData();
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
         }
     }
 }

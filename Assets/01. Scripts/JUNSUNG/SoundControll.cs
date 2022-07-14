@@ -6,13 +6,18 @@ using Core;
 
 namespace JUNSUNG
 {
-    public class SoundControll : MonoSingleton<SoundControll>
+    public class SoundControll : MonoBehaviour
     {
+        public static SoundControll Instance = null;
+
         private Slider slider = null;
         private AudioSource effectAudioSource = null;
 
         private void Awake()
         {
+            if(Instance == null)
+             Instance = this;
+
             DontDestroyOnLoad(this);
             slider = GetComponent<Slider>(); 
             effectAudioSource = GameObject.Find("EffectSoundPlayer").GetComponent<AudioSource>();

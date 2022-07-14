@@ -48,7 +48,7 @@ namespace Core
             string JSON = JsonUtility.ToJson(season);
             PlayerPrefs.SetString("SeasonJSON", JSON);
             PlayerPrefs.SetFloat("CurrentTime", currentTime);
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
         }
 
         private void Start()

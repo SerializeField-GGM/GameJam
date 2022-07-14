@@ -25,7 +25,7 @@ namespace SEH00N
 
         private void OnDisable()
         {
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
         }
 
         private void Update()

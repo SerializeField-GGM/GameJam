@@ -2,6 +2,7 @@ using Core;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using JUNSUNG;
 
 namespace SEH00N
 {
@@ -15,6 +16,8 @@ namespace SEH00N
         private float currentTime = 0;
         private int getMoney = 0;
         private bool isEnd = false;
+        private CountDown countDown;
+
 
         private void Awake()
         {
@@ -23,10 +26,13 @@ namespace SEH00N
             endPanel = GameObject.Find("EndPanel");
             moneyText = endPanel.transform.Find("MoneyText").GetComponent<TextMeshProUGUI>();
             endPanel.SetActive(false);
+            countDown = GameObject.Find("ProgrammingManager").GetComponent<CountDown>();
         }
 
         private void Update()
         {
+            if(countDown.isStart == false) { return; }
+
             currentTime += Time.deltaTime;
             slider.value = (limitTime - currentTime) / limitTime;
             if(slider.value <= 0 && !isEnd)

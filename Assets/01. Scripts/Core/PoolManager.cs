@@ -3,11 +3,23 @@ using UnityEngine;
 
 namespace Core
 {
-    public class PoolManager
+    public class PoolManager : MonoBehaviour
     {
         public static PoolManager Instance = null;
+
+        [SerializeField] List<PoolableMono> poolingList;
+   
         private Dictionary<string, Pools<PoolableMono>> pools = new Dictionary<string, Pools<PoolableMono>>();
 
+        void Awake()
+        {
+            if(Instance == null)
+                Instance = this;
+
+            foreach(PoolableMono prefab in poolingList)
+                PoolManager.Instance.CreatePool(prefab, transform);
+        }
+         
         public void CreatePool(PoolableMono prefab, Transform parent)
         {
             if(pools.ContainsKey(prefab.name)) { Debug.Log($"키 중복"); return; }

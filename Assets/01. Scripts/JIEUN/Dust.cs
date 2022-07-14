@@ -16,7 +16,7 @@ namespace JIEUN
 
         public override void Reset()
         {
-            image.color = Color.white;
+            image.color = new Color(0, 0, 0, 1);
         }
 
         public void OnCleaning(float amount)

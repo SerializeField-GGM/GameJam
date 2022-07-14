@@ -15,26 +15,23 @@ namespace SEH00N
         protected bool isPressed = false;
         protected TextMeshProUGUI eventText;
         protected Button button = null;
-
         private void Start()
         {
             button = GetComponent<Button>();
             eventText = GameObject.Find("EventText").GetComponent<TextMeshProUGUI>();
         }
-
         private void Update()
         {
             if (isPressed || TimeManager.Instance.season != season)
                 button.interactable = false;
-            currentSeason = TimeManager.Instance.season;
         }
-
         private void LateUpdate()
         {
-            if (currentSeason != TimeManager.Instance.season)
+            if (TimeManager.Instance.onChanging)
+            {
                 StartCoroutine(SetButton());
+            }
         }
-
         private IEnumerator SetButton()
         {
             yield return new WaitForSeconds(3f);

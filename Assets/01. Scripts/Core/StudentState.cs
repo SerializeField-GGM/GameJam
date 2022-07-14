@@ -107,29 +107,16 @@ namespace Core
             passionT = textPanel.Find("PassionT").GetComponent<TextMeshProUGUI>();
             talentT = textPanel.Find("TalentT").GetComponent<TextMeshProUGUI>();
         }
-
         private void Start()
         {
             std = DataManager.Instance.std;
             countT.text = $"학생수\t\t\t\t\t\t{std.count}명";
-
             stressS.value = std.stress;
             stressT.text = $"스트레스\t\t\t\t\t\t\t\t\t\t\t\t{(std.stress).ToString("+0.0")}%";
-
             passionS.value = std.passion;
             passionT.text = $"열정\t\t\t\t\t\t\t\t\t\t\t\t\t{(std.passion).ToString("+0.0")}%";
-
             talentS.value = std.talent;
             talentT.text = $"능력\t\t\t\t\t\t\t\t\t\t\t\t\t{(std.talent).ToString("+0.0")}%";
-        }
-
-        private void Update()
-        {
-            // if(Input.GetButtonDown("Jump"))
-            // {
-            //     Debug.Log($"123");
-            //     AddStudent(1);
-            // }
         }
 
         public void AddStress(float value)

@@ -17,11 +17,11 @@ namespace Core
         }
 
         [SerializeField] long balancing = 1000;
-        [SerializeField] public float delay = 900;
+        public float currentTime = 0;
+        public float delay = 900;
         [SerializeField] UnityEvent doSlideleft, doPopup, doSlideright, doPopdown;
         public Season season = Season.Spring;
-        [SerializeField] public float currentTime = 0;
-        private bool onChanging = false;
+        public bool onChanging = false;
         private StudentData std = null;
         private SchoolData sd = null;
 
@@ -47,11 +47,10 @@ namespace Core
             StartCoroutine(NextCorountine());
         }
 
-        private void SetSeason()
+         private void SetSeason()
         {
             if (onChanging) return;
             currentTime += Time.deltaTime;
-
             if (currentTime >= delay)
             {
                 StartCoroutine(ChangeSeason());

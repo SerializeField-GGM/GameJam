@@ -38,12 +38,6 @@ namespace JIEUN
 
         private void Update() 
         {
-            if(currentTime < maxTime)
-                currentTime += Time.deltaTime;
-    
-            
-            timer.value = currentTime / maxTime;
-
             if(timer.value >= 1 && !isOver)
             {
                 gameoverPanel.SetActive(true);
@@ -65,9 +59,24 @@ namespace JIEUN
 
         private void Start() {
             StartCoroutine(Spawn());
+            StartCoroutine(SetTime());
+        }
+
+        IEnumerator SetTime()
+        {
+            yield return new WaitForSeconds(8f);
+            while(currentTime < maxTime)
+            {
+                currentTime += Time.deltaTime;
+
+
+                timer.value = currentTime / maxTime;
+                yield return null;
+            }
         }
         IEnumerator Spawn()
         {
+            yield return new WaitForSeconds(8f);
             while(true)
             {
                 if(i < 7)

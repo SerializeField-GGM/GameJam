@@ -125,11 +125,11 @@ namespace Core
 
         private void Update()
         {
-            if(Input.GetButtonDown("Jump"))
-            {
-                Debug.Log($"123");
-                AddStudent(1);
-            }
+            // if(Input.GetButtonDown("Jump"))
+            // {
+            //     Debug.Log($"123");
+            //     AddStudent(1);
+            // }
         }
 
         public void AddStress(int value)

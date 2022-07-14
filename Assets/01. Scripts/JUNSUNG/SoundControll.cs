@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Core;
 
 namespace JUNSUNG
 {
-    public class SoundControll : MonoBehaviour
+    public class SoundControll : MonoSingleton<SoundControll>
     {
         private Slider slider = null;
-        private AudioSource buttonAudioSource = null;
+        private AudioSource effectAudioSource = null;
 
         private void Awake()
         {
             slider = GetComponent<Slider>(); 
-            buttonAudioSource = GameObject.Find("EffectSoundPlayer").GetComponent<AudioSource>();
+            effectAudioSource = GameObject.Find("EffectSoundPlayer").GetComponent<AudioSource>();
         }
 
         public void VolumeControll(AudioSource audioSource)
@@ -21,10 +22,11 @@ namespace JUNSUNG
             audioSource.volume = slider.value;
         }
 
-        public void PlayButtonSound()
+        public void PlayButtonSound(AudioClip clip)
         {
-            buttonAudioSource.Stop();
-            buttonAudioSource.Play();
+            effectAudioSource.clip = clip;
+            effectAudioSource.Stop();
+            effectAudioSource.Play();
         }
     }
 }

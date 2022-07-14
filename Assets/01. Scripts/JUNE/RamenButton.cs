@@ -10,6 +10,8 @@ namespace JUNE
         [SerializeField] GameObject eatUpPanel;
         [SerializeField] GameObject clearPanel;
         [SerializeField] GameObject failPanel;
+        [SerializeField] GameObject door;
+        [SerializeField] GameObject openDoor;
         public void OnClickReturn()
         {
             eatingPanel.SetActive(false);
@@ -17,6 +19,8 @@ namespace JUNE
             failPanel.SetActive(false);
             clearPanel.SetActive(false);
             roomPanel.SetActive(false);
+            door.SetActive(true);
+            openDoor.SetActive(false);
             Time.timeScale = 1;
             GameManager.Instance.main.SetActive(true);
             SceneLoader.Instance.RemoveScene("RAMEN");

@@ -3,7 +3,8 @@
     "rootNamespace": "JUNE",
     "references": [
         "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:2aff0ce01f781a447b92e8b07a495ca6"
+        "GUID:2aff0ce01f781a447b92e8b07a495ca6",
+        "GUID:f8c68ad4030d48545918c42f5d6a6ad5"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

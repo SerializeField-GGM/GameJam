@@ -12,7 +12,7 @@ namespace JIEUN
         [SerializeField] GameObject gameoverPanel;
         [SerializeField] PoolableMono dust = null;
         [SerializeField] Transform min, max;
-        [SerializeField] GameObject scorePanel = null;
+        //[SerializeField] GameObject scorePanel = null;
         [SerializeField] Slider timer = null;
         [SerializeField] float currentTime = 0;
         [SerializeField] float maxTime = 25;
@@ -46,7 +46,7 @@ namespace JIEUN
                 gameoverPanel.SetActive(true);
                 isOver = true;
                 int randStress = Random.Range(-5, 6);
-                int getMoney = ScoreManager.Instance.dustCount * 2100;
+                int getMoney = ScoreManager.Instance.dustCount * 4100;
                 if(randStress > 0)
                     gameovertxt.text = $"청소를 열심히 해서 상점을 받았다!\n스트레스 +{randStress}\n{getMoney}원";
                 else
@@ -71,7 +71,7 @@ namespace JIEUN
                     temp.transform.position = cam.WorldToScreenPoint(new Vector3(Random.Range(min.position.x, max.position.x),
                     Random.Range(min.position.y, max.position.y)));
                     i++;
-                    yield return new WaitForSeconds(1f);
+                    yield return new WaitForSeconds(0.6f);
                 }
                 yield return null;
             }

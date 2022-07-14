@@ -42,6 +42,8 @@ namespace JUNE
 
             if(time.fillAmount == 1 && !isOver && (smell.activeSelf != false || ramen.activeSelf != false || soup.activeSelf != false || scraps.activeSelf != false))
             {
+                door.SetActive(false);
+                openDoor.SetActive(true);
                 isOver = true;
                 failText.SetActive(true);
                 StudentState.Instance.AddStress(+3);

@@ -34,7 +34,7 @@ namespace SEH00N
                 isEnd = true;
                 endPanel.SetActive(true);
                 inputField.interactable = false;
-                getMoney = ScoreManager.Instance.score * 300;
+                getMoney = ScoreManager.Instance.score * 110;
                 MoneyManager.Instance.SetMoney(getMoney);
                 moneyText.text = $"{getMoney}원 획득";
             }

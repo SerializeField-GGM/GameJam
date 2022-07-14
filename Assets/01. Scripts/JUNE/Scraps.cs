@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using JUNSUNG;
 
 namespace JUNE
 {
     public class Scraps : MonoBehaviour
     {
         [SerializeField] GameObject Broom;
+        [SerializeField] AudioClip qntmfjrqntmfjr;
         Image image;
         Color c;
         private float currentTime = 0;
@@ -30,6 +32,7 @@ namespace JUNE
         {
             if(percent > 1)
             {
+                SoundControll.Instance.PlayButtonSound(qntmfjrqntmfjr);
                 gameObject.SetActive(false);
             }
         }

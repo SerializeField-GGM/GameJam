@@ -2,24 +2,25 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using TMPro;
 
 namespace Core
 {
-    public class TimeManager : MonoBehaviour
+    public class TimeManager : MonoSingleton<TimeManager>
     {
         public enum Season
         {
             Spring = 0,
-            Summer = 1,
+            summer = 1,
             Fall = 2,
             Winter = 3,
         }
 
         [SerializeField] long balancing = 1000;
-        [SerializeField] float delay = 900;
+        [SerializeField] public float delay = 900;
         [SerializeField] UnityEvent doSlideleft, doPopup, doSlideright, doPopdown;
         public Season season = Season.Spring;
-        [SerializeField] float currentTime = 0;
+        [SerializeField] public float currentTime = 0;
         private bool onChanging = false;
 
         private void Update()

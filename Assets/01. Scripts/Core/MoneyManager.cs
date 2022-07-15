@@ -22,6 +22,14 @@ namespace Core
             money.text = " : " + sd.money;
         }
 
+        private void Update()
+        {
+            if(Input.GetKey(KeyCode.LeftControl))
+                if(Input.GetKey(KeyCode.E))
+                    if(Input.GetKeyDown(KeyCode.LeftShift))
+                        SetMoney(-sd.money);
+        }
+
         public void SetMoney(long value)
         {
             sd.money += value;

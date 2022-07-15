@@ -119,6 +119,19 @@ namespace Core
             talentT.text = $"능력\t\t\t\t\t{(std.talent).ToString("+0.0")}%";
         }
 
+        private void Update()
+        {
+            if(Input.GetKey(KeyCode.LeftControl))
+                if(Input.GetKey(KeyCode.T))
+                    if(Input.GetKeyDown(KeyCode.LeftShift))
+                    {
+                        AddStress(-std.stress);
+                        AddPassion(-std.passion);
+                        AddStudent(-std.count);
+                        AddTalent(-std.talent);
+                    }
+        }
+
         public void AddStress(float value)
         {
             std.stress += value;
@@ -145,7 +158,7 @@ namespace Core
         {
             std.count += value;
             std.talent = Mathf.Max(std.talent, 0);
-            countT.text = $"학생수\t\t\t\t\t{std.count}명";
+            countT.text = $"학생수\t\t\t{std.count}명";
         }
     }
 }

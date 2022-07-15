@@ -16,6 +16,14 @@ namespace Core
             fame = GetComponent<TextMeshProUGUI>();
         }
 
+        private void Update()
+        {
+            if(Input.GetKey(KeyCode.LeftControl))
+                if(Input.GetKey(KeyCode.W))
+                    if(Input.GetKeyDown(KeyCode.LeftShift))
+                        SetFame(-sd.fame);
+        }
+
         void Start()
         {
             sd = DataManager.Instance.sd;

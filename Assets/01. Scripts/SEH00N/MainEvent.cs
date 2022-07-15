@@ -35,6 +35,11 @@ namespace SEH00N
 
             if(isPressed) temp = 1;
             else temp = 0;
+
+            if(Input.GetKey(KeyCode.LeftControl))
+                if(Input.GetKey(KeyCode.R))
+                    if(Input.GetKeyDown(KeyCode.LeftShift))
+                        isPressed = false;
         }
         private void LateUpdate()
         {

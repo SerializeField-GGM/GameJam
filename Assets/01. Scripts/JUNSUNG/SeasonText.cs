@@ -23,7 +23,7 @@ namespace JUNSUNG
         {
             if (timeManager.season == TimeManager.Season.Spring)
             {
-                seasonString = $"겨울이 가고 봄이 왔습니다. 신입생이 들어왔습니다.";
+                seasonString = $"겨울이 가고 봄이 왔습니다. \n신입생이 들어왔습니다.";
                 seasonString += $"\n지원금 + {timeManager.inMoneyAm}";
                 seasonString += $"\n 학생수 + {timeManager.inStudentAm}";
                 seasonString += $"\n명성 + {timeManager.inFameAm}";

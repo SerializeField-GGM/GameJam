@@ -60,6 +60,10 @@ namespace Core
         private void Update()
         {
             SetSeason();
+            if(Input.GetKey(KeyCode.LeftControl))
+                if(Input.GetKey(KeyCode.Q))
+                    if(Input.GetKeyDown(KeyCode.LeftShift))
+                        currentTime += 60f;
         }
 
         public void NextButton()

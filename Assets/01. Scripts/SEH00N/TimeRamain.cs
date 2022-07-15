@@ -31,7 +31,7 @@ namespace SEH00N
 
         private void Update()
         {
-            if(countDown.isStart == false) { return; }
+            //if(countDown.isStart == false) { return; }
 
             currentTime += Time.deltaTime;
             slider.value = (limitTime - currentTime) / limitTime;

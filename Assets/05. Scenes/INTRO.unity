@@ -1397,6 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cae56bc2fb0e3458da71c4f70bbc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastPanel: {fileID: 2024303291}
   rt: {fileID: 24118711}
   duration: 0.5
   maxVal: 5760

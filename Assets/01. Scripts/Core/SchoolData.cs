@@ -8,6 +8,7 @@ namespace Core
     {
         public long money;
         public long fame;
+        public string name;
         public List<string> facilities = new List<string>();
     }
 }

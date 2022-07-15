@@ -13,7 +13,7 @@ namespace Core
         private void Awake()
         {
             if(Instance == null) Instance = this;
-            fame = GetComponent<TextMeshProUGUI>();
+            fame = GameObject.Find("Fame").GetComponent<TextMeshProUGUI>();
         }
 
         private void Update()
@@ -38,6 +38,7 @@ namespace Core
         {
             sd.fame += value;
             fame.text = " : " + sd.fame;
+            Client.Instance.SetScore();
         }
     }
 }

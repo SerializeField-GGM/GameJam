@@ -12,13 +12,12 @@ namespace Core
 
         private void Awake()
         {
-            //PlayerPrefs.DeleteAll();
             if(Instance == null) Instance = this;
 
             string sdJSON = PlayerPrefs.GetString("sdJSON", null);
             string stdJSON = PlayerPrefs.GetString("stdJSON", null);
           
-            if(sdJSON.Length == 0) sd = new SchoolData() { money = 0, fame = 0, facilities = new List<string>() };
+            if(sdJSON.Length == 0) sd = new SchoolData() { money = 0, fame = 0, name = null, facilities = new List<string>() };
             else sd = JsonUtility.FromJson<SchoolData>(sdJSON);
             
             if(stdJSON.Length == 0) std = new StudentData() { stress = 0, talent  = 0, passion = 30, count = 70 };

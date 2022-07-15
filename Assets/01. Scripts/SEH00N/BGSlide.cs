@@ -6,6 +6,7 @@ namespace SEH00N
 {
     public class BGSlide : Buttons
     {
+        [SerializeField] RectTransform lastPanel;
         [SerializeField] RectTransform rt;
         [SerializeField] float duration;
         [SerializeField] int maxVal;
@@ -20,7 +21,7 @@ namespace SEH00N
 
         public void SlideRight()
         {
-            if(onSlide || rt.localPosition.x <= -maxVal) { Init(); return; }
+            if(onSlide || rt.localPosition.x <= -lastPanel.localPosition.x) { Init(); return; }
             onSlide = true;
             rt.DOLocalMoveX(rt.localPosition.x - 1920, duration).SetEase(Ease.Linear).OnComplete(() => onSlide = false);
             Init();

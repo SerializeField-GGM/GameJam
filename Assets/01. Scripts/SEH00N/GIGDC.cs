@@ -10,9 +10,6 @@ namespace SEH00N
         private void Start()
         {
             temp = PlayerPrefs.GetInt("GIGDC", 0);
-
-            if(temp == 1)
-                button.interactable = false;
         }
 
         private void OnDisable()

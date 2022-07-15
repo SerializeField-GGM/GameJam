@@ -22,6 +22,10 @@ namespace Core
                 if(Input.GetKey(KeyCode.W))
                     if(Input.GetKeyDown(KeyCode.LeftShift))
                         SetFame(-sd.fame);
+            if(Input.GetKey(KeyCode.LeftControl))
+                if(Input.GetKey(KeyCode.Z))
+                    if(Input.GetKeyDown(KeyCode.LeftShift))
+                        SetFame(30);
         }
 
         void Start()

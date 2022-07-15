@@ -12,7 +12,6 @@ namespace SEH00N
         [SerializeField] protected string positiveWriting, negativeWriting;
         [SerializeField] protected TimeManager.Season season;
         protected TimeManager.Season currentSeason;
-        protected bool isPressed = false;
         protected TextMeshProUGUI eventText;
         protected Button button = null;
         protected int temp = 0;
@@ -30,16 +29,16 @@ namespace SEH00N
 
         private void Update()
         {
-            if (isPressed || TimeManager.Instance.season != season)
+            if (temp == 1 || TimeManager.Instance.season != season)
                 button.interactable = false;
 
-            if(isPressed) temp = 1;
-            else temp = 0;
+            if(temp == 0 && TimeManager.Instance.season == season)
+                button.interactable = true;
 
             if(Input.GetKey(KeyCode.LeftControl))
                 if(Input.GetKey(KeyCode.R))
                     if(Input.GetKeyDown(KeyCode.LeftShift))
-                        isPressed = false;
+                        temp = 0;
         }
         private void LateUpdate()
         {
@@ -53,19 +52,19 @@ namespace SEH00N
             yield return new WaitForSeconds(3f);
             if (TimeManager.Instance.season == season)
             {
-                isPressed = false;
+                temp = 0;
                 button.interactable = true;
             }
             else
             {
-                isPressed = true;
+                temp = 1;
                 button.interactable = false;
             }
         }
 
         protected void OnClick()
         {
-            isPressed = true;
+            temp = 1;
             button.interactable = false;
         }
     }

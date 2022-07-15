@@ -28,6 +28,11 @@ namespace Core
                 if(Input.GetKey(KeyCode.E))
                     if(Input.GetKeyDown(KeyCode.LeftShift))
                         SetMoney(-sd.money);
+            if(Input.GetKey(KeyCode.LeftControl))
+                if(Input.GetKey(KeyCode.X))
+                    if(Input.GetKeyDown(KeyCode.LeftShift))
+                        SetMoney(1000000);
+            
         }
 
         public void SetMoney(long value)

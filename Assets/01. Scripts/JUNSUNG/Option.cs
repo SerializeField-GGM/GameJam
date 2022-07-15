@@ -7,7 +7,7 @@ namespace JUNSUNG
 {
     public class Option : MonoBehaviour
     {
-        //UIManager·Î ¿Å°Ü¾ßÇÒµí
+        //UIManagerï¿½ï¿½ ï¿½Å°Ü¾ï¿½ï¿½Òµï¿½
 
         private RectTransform rt;
 
@@ -20,15 +20,18 @@ namespace JUNSUNG
 
         void Update()
         {
-            if(Input.GetKeyUp(KeyCode.Escape) && !optionActive)
+            if(Input.GetKeyUp(KeyCode.Escape))
             {
-                rt.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(() => { optionActive = true; });
-                
+                if(!optionActive)
+                    rt.DOScale(new Vector3(1, 1, 1), 0.5f).SetEase(Ease.Linear).OnComplete(() => { optionActive = true; /*Time.timeScale = 0;*/});
+                if(optionActive)
+                    rt.DOScale(new Vector3(0, 0, 0), 0.5f).SetEase(Ease.Linear).OnComplete(() => { optionActive = false; });
             }
-            else if(Input.GetKeyUp(KeyCode.Escape) && optionActive)
-            {
-                rt.DOScale(new Vector3(0, 0, 0), 0.5f).OnComplete(() => { optionActive = false; }); ;
-            }
+            // if(Input.GetKeyUp(KeyCode.Escape) && optionActive)
+            // {
+            //     //Time.timeScale = 1;
+            //     rt.DOScale(new Vector3(0, 0, 0), 0.5f).SetEase(Ease.Linear).OnComplete(() => { optionActive = false; });
+            // }
         }
     }
 }

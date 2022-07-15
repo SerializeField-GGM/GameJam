@@ -18,6 +18,7 @@ namespace UI
 
         public void DoPopDown(RectTransform rt)
         {
+            Time.timeScale = 1;
             rt.DOScale(Vector3.zero, duration);//.OnComplete(() => rt.gameObject.SetActive(false));
             Init();
         }

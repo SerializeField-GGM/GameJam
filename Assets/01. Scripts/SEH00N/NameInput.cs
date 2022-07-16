@@ -13,7 +13,6 @@ namespace SEH00N
         private void Awake()
         {
             i = PlayerPrefs.GetInt("IsSetted", 0);
-            if(i == 0) Time.timeScale = 0;
             if(i == 1)
                 gameObject.SetActive(false);
         }

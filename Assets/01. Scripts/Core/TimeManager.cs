@@ -59,6 +59,7 @@ namespace Core
 
         private void Update()
         {
+            if(DataManager.Instance.sd.name == null) return;
             SetSeason();
             if(Input.GetKey(KeyCode.LeftControl))
                 if(Input.GetKey(KeyCode.Q))

@@ -10,17 +10,20 @@ namespace Core
     {
         public static Client Instance = null;
 
-        [SerializeField] TextMeshProUGUI text;
+        [SerializeField] TextMeshProUGUI nameText, fameText, errorText;
         [SerializeField] TMP_InputField field;
         private string PORT = "8081";
         private string IP = "127.0.0.1";
         public WebSocket client;
+        private List<string> messages = new List<string>();
         public List<string> names = new List<string>();
+        private object locker = new object();
 
         private void Awake()
         {
             if (Instance == null) Instance = this;
         }
+
 
         private void Start()
         {
@@ -35,10 +38,31 @@ namespace Core
             client.Send("init:");
         }
 
-        public void GetData(object sender, MessageEventArgs e)
+        private void Update()
         {
-            string type = e.Data.Split(':')[0];
-            string value = e.Data.Split(':')[1];
+            if(messages.Count > 0)
+            {
+                lock(locker)
+                {
+                    foreach(string m in messages)
+                        ProcessData(m);
+                    messages.Clear();
+                }
+            }
+        }
+
+        private void GetData(object sender, MessageEventArgs e)
+        {
+            lock(locker)
+            {
+                messages.Add(e.Data);
+            }
+        }
+
+        public void ProcessData(string e)
+        {
+            string type = e.Split(':')[0];
+            string value = e.Split(':')[1];
 
             if(value.Length == 0) return;
             switch (type)
@@ -50,9 +74,15 @@ namespace Core
                     GetName(value);
                     break;
                 case "error":
+                    Error(value);
                     Debug.Log($"{value}");
                     break;
             }
+        }
+
+        public void Error(string value)
+        {
+            errorText.text = value;
         }
 
         public void GetName(string value)
@@ -69,23 +99,30 @@ namespace Core
             string[] arr = value.Split('|');
             string nickName = null;
             string fame = null;
-            string data = null;
+            string nameData = null;
+            string fameData = null;
 
-            foreach(string i in arr)
-                {
-                    nickName = i.Split(',')[0];
-                    fame = i.Split(',')[1];
-                    dic.Add(nickName, int.Parse(fame));
-                }
+            foreach (string i in arr)
+            {
+                nickName = i.Split(',')[0];
+                fame = i.Split(',')[1];
+                dic.Add(nickName, int.Parse(fame));
+            }
 
             var orderedDic = dic.OrderByDescending(x => x.Value);
 
+            int rank = 1;
             foreach(var i in orderedDic)
-                data += i.Key + " : " + i.Value + "\n";
-
-            text.text = data;
-            Debug.Log($"123");
+            {
+                nameData += rank + ". 학교 : " + i.Key + "\n";
+                fameData += "명성 : " + i.Value + "\n";
+                rank++;
+            }
+            
+            nameText.text = nameData;
+            fameText.text = fameData;
         }
+
 
         public void SetName()
         {

@@ -18,7 +18,6 @@ namespace SEH00N
         private bool isEnd = false;
         private CountDown countDown;
 
-
         private void Awake()
         {
             inputField = GameObject.Find("InputField").GetComponent<TMP_InputField>();
@@ -31,8 +30,9 @@ namespace SEH00N
 
         private void Update()
         {
-            //if(countDown.isStart == false) { return; }
+            if(countDown.isStart == false) { inputField.interactable = false; return; }
 
+            inputField.interactable = true;
             currentTime += Time.deltaTime;
             slider.value = (limitTime - currentTime) / limitTime;
             if(slider.value <= 0 && !isEnd)

@@ -14,7 +14,7 @@ if (fs.existsSync(namesFile) && fs.readFileSync(namesFile) != "")
     names = JSON.parse(fs.readFileSync(namesFile));
 
 server.on('listening', () => {
-    console.log("서버가 열렸습니다!");
+    console.log("서버 온!");
 });
 
 server.on('connection', client => {
@@ -40,6 +40,11 @@ server.on('connection', client => {
                 break;
             case 'nickname':
                 const name = data;
+                if(name.length > 5) 
+                {
+                    client.send('error:5글자 이내로 입력해주세요');
+                    break;
+                }
                 let isMatch = false;
                 names.forEach(i => {
                     if (i === name) isMatch = true;

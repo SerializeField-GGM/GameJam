@@ -7,7 +7,7 @@ namespace Core
     {
         public static FameManager Instance = null;
 
-        TextMeshProUGUI fame;
+        private TextMeshProUGUI fame;
         private SchoolData sd = null;
 
         private void Awake()
@@ -31,7 +31,9 @@ namespace Core
         void Start()
         {
             sd = DataManager.Instance.sd;
-            fame.text = " : " + sd.fame;
+
+            //fame.text = " : " + sd.fame;
+            //fame.SetText("외안되");
         }
 
         public void SetFame(long value)

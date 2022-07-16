@@ -18,7 +18,7 @@ namespace JUNSUNG
             if(Instance == null)
              Instance = this;
 
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(transform.root.gameObject);
             slider = GetComponent<Slider>(); 
             effectAudioSource = GameObject.Find("EffectSoundPlayer").GetComponent<AudioSource>();
         }

@@ -22,9 +22,8 @@ namespace JUNE
         }
         private void OnEnable()
         {
-            transform.parent = GameObject.Find("TextCanvas").transform;
+            transform.SetParent(GameObject.Find("TextCanvas").transform);
             rt.localPosition = new Vector3(Random.Range(-400f, 400f), Random.Range(-100f, 100f));
-            //image.color = Color.white;
             rt.DOLocalMove(new Vector3(transform.localPosition.x, transform.localPosition.y + 100), 0.5f);
             StartCoroutine(Disappear());
         }

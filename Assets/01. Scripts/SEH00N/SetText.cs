@@ -43,7 +43,24 @@ namespace SEH00N
                     ScoreManager.Instance.SetScore(-25);
                     ResetText();
                 }
+            }
+        }
 
+        public void EnterText()
+        {
+            if(inputField.interactable)
+            {
+                if (texts[randIndex] == inputField.text)
+                {
+                    isCorrect = true;
+                    ScoreManager.Instance.SetScore(100);
+                    ResetText();
+                }
+                else
+                {
+                    ScoreManager.Instance.SetScore(-25);
+                    ResetText();
+                }
             }
         }
 

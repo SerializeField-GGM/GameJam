@@ -28,6 +28,7 @@ namespace Core
         {
             string JSON = JsonUtility.ToJson(sd);
             PlayerPrefs.SetString("sdJSON", JSON);
+            PlayerPrefs.Save();
         }
 
         public void SaveStudentData()
@@ -37,6 +38,7 @@ namespace Core
             std.talent = Mathf.Clamp(std.talent, 0 , 100);
             string JSON = JsonUtility.ToJson(std);
             PlayerPrefs.SetString("stdJSON", JSON);
+            PlayerPrefs.Save();
         }
 
         private void OnDisable()

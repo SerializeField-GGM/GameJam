@@ -32,7 +32,7 @@ namespace Core
         {
             sd = DataManager.Instance.sd;
 
-            //fame.text = " : " + sd.fame;
+            fame.text = " : " + sd.fame;
             //fame.SetText("외안되");
         }
 
@@ -40,7 +40,6 @@ namespace Core
         {
             sd.fame += value;
             fame.text = " : " + sd.fame;
-            Client.Instance.SetScore();
         }
     }
 }
